@@ -1,0 +1,106 @@
+[
+{
+ "model": "core.product",
+ "pk": 2,
+ "fields": {
+  "category": 1,
+  "name": "Charger 1",
+  "description": "Fast Charger",
+  "cross_price": 250,
+  "last_price": 200,
+  "image": "Product/1.jpg",
+  "home_page_visiblity": true
+ }
+},
+{
+ "model": "core.product",
+ "pk": 3,
+ "fields": {
+  "category": 1,
+  "name": "Charger 2",
+  "description": "Fast Charger",
+  "cross_price": 350,
+  "last_price": 300,
+  "image": "Product/2.jpg",
+  "home_page_visiblity": false
+ }
+},
+{
+ "model": "core.product",
+ "pk": 4,
+ "fields": {
+  "category": 1,
+  "name": "Charger 3",
+  "description": "Fast Charger",
+  "cross_price": 400,
+  "last_price": 350,
+  "image": "Product/4.png",
+  "home_page_visiblity": false
+ }
+},
+{
+ "model": "core.product",
+ "pk": 5,
+ "fields": {
+  "category": 2,
+  "name": "Head Set 1",
+  "description": "Head Set 1",
+  "cross_price": 200,
+  "last_price": 150,
+  "image": "Product/5.jpg",
+  "home_page_visiblity": true
+ }
+},
+{
+ "model": "core.product",
+ "pk": 6,
+ "fields": {
+  "category": 3,
+  "name": "Cable 1",
+  "description": "Cable 1",
+  "cross_price": 123,
+  "last_price": 100,
+  "image": "Product/3.png",
+  "home_page_visiblity": true
+ }
+},
+{
+ "model": "core.product",
+ "pk": 7,
+ "fields": {
+  "category": 3,
+  "name": "Cable 2",
+  "description": "Cable 2",
+  "cross_price": 100,
+  "last_price": 96,
+  "image": "Product/6.jpg",
+  "home_page_visiblity": false
+ }
+},
+{
+ "model": "core.product",
+ "pk": 8,
+ "fields": {
+  "category": 6,
+  "name": "Neckband",
+  "description": "Neckband 1",
+  "cross_price": 200,
+  "last_price": 190,
+  "image": "Product/pngwing.com_2.png",
+  "home_page_visiblity": true
+ }
+},
+{
+ "model": "core.product",
+ "pk": 9,
+ "fields": {
+  "category": 7,
+  "name": "Pouches 1",
+  "description": "Pouches 1",
+  "cross_price": 200,
+  "last_price": 180,
+  "image": "Product/pngwing.com_1.png",
+  "home_page_visiblity": true
+ }
+}
+]

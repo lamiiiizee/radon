@@ -1,0 +1,65 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title %}Updates{% endblock %}
+{% block content %}
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-container mb-4">
+        <nav data-depth="2" class="breadcrumb container">
+          <h1 class="h1 category-title breadcrumb-title">BLOG</h1>
+          <ul>
+            <li>
+              <a href="{% url 'core:index' %}">
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+                <span>Blog Articles</span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Smart Blog  -->
+      <div id="wrapper">
+        <div class="container">
+          <div class="row">    
+                                
+            <div id="content-wrapper" class="col-xs-12 col-sm-12 col-md-12 col-lg-9"> 
+              <div id="smartblogcat" class="block">
+
+                {% for update in updates  %}
+                <div class="sdsarticleCat clearfix row">
+                  <div class="articleContent col-xl-6 col-lg-12 col-md-12">
+                    <a href="{% url 'core:update' update.id %}" title="Upon of seasons earth dominion">
+                      <img alt="Upon of seasons earth dominion" src="{{update.image.crop.870x588}}">
+                    </a>
+                  </div>
+                  <div class="smartblog-desc col-xl-6 col-lg-12 col-md-12">
+                    <div class="sdsarticleHeader">
+                      <h3 class='sdstitle_block'><a title="Upon of seasons earth dominion" href="{% url 'core:update' update.id %}">{{update.heading}}</a></h3>
+                    </div>
+                    
+                    <div class="sdsarticle-des">
+                      <div class="clearfix">
+                        <div class="lipsum">
+                          {{update.short_description}}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sdsreadMore">
+                      <span class="more">
+                        <a title="Upon of seasons earth dominion" href="{% url 'core:update' update.id %}" class="r_more btn-primary">Read more</a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+            </div>          
+          </div>
+        </div>        
+      </div>
+      <div class="container">
+        <div id="_mobile_left_column"></div>
+        <div id="_mobile_right_column"></div>
+        <div class="clearfix"></div>
+      </div>
+      {% endblock %}

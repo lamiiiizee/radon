@@ -1,0 +1,114 @@
+
+{% load static %}
+<header id="header" class="home">
+    <div class="nav-header">
+
+
+      <div class="header-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="ishiemailblock">
+          <div class="email-title">
+            Email :
+          </div>
+          <a href="{% url 'core:contact' %}" class="email-num">info@gmail.com</a>
+        </div>
+      </div>
+
+
+
+    </div>
+    <div class="header-top">
+      <!-- desktop_logo -->
+      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <div id="desktop_logo">
+          <a href="{% url 'core:index' %}">
+            <img class="logo img-responsive" src="{% static 'web/images/logo.png' %}" alt="Demo Shop">
+          </a>
+        </div>
+      </div>              
+      
+      <div class="megamenu col-lg-7">
+        <!-- mega menu -->
+        <div id="_desktop_top_menu" class="menu js-top-menu hidden-sm-down">
+          <ul class="top-menu" id="top-menu" data-depth="0">  
+            <li class="cms-page" id="category-12">
+              <a class="dropdown-item" href="{% url 'core:index' %}" data-depth="0">
+                Home
+              </a>
+            </li>
+           
+            <li class="cms-page" id="cms-page-4">
+              <a class="dropdown-item" href="{% url 'core:about' %}" data-depth="0">
+                About
+              </a>
+            </li>
+            <li class="category" id="category-3">
+              <a class="dropdown-item" href="{% url 'core:products' %}" data-depth="0">Products</a>
+            </li>
+            <li class="category" id="category-1111">
+              <a class="dropdown-item" href="{% url 'core:gallery' %}" data-depth="0">Gallery</a>
+            </li>
+            <li class="cms-page" id="cms-page-1">
+              <a class="dropdown-item" href="{% url 'core:updates' %}" data-depth="0">
+                Updates
+              </a>
+            </li>
+            <li class="cms-page" id="cms-page-1">
+              <a class="dropdown-item" href="{% url 'core:contact' %}" data-depth="0">
+                Contact
+              </a>
+            </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <div class="header-right col-md-2 col-sm-6 col-xs-6">
+      
+     
+        <div id="_desktop_seach_widget">
+          <div id="search_widget" class="search-widget">
+            <span class="search-logo">
+              <span class="search-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">   
+                  <symbol id="magnifying-desktop" viewBox="0 0 1200 1200"><title>magnifying-desktop</title>
+                    <path d="M606.209,578.714L448.198,423.228C489.576,378.272,515,318.817,515,253.393C514.98,113.439,399.704,0,257.493,0
+                         C115.282,0,0.006,113.439,0.006,253.393s115.276,253.393,257.487,253.393c61.445,0,117.801-21.253,162.068-56.586
+                         l158.624,156.099c7.729,7.614,20.277,7.614,28.006,0C613.938,598.686,613.938,586.328,606.209,578.714z M257.493,467.8
+                         c-120.326,0-217.869-95.993-217.869-214.407S137.167,38.986,257.493,38.986c120.327,0,217.869,95.993,217.869,214.407
+                         S377.82,467.8,257.493,467.8z"></path>
+                   </symbol>
+                </svg>
+                <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#magnifying-desktop" x="20%" y="22%"></use></svg>
+            </span>
+            </span>
+            <form method="get" action="https://demo.ishithemes.com/html/fabulous/Layout004/categorypage_fullwidth.html">
+              <input name="s" value="" placeholder="Search" class="ui-autocomplete-input" autocomplete="off" type="text">
+              <button type="submit">
+                <i class="material-icons search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <div class="nav-full-width">
+      <div class="container">
+        <div class="row">
+        <!-- mobile media -->
+          <div id="menu-icon" class="menu-icon hidden-lg-up">
+            <div class="menu-block">
+              <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">   
+                <symbol id="setup" viewBox="0 0 750 750"><title>setup</title><g> <rect y="46.06" width="344.339" height="29.52"></rect> </g><g> <rect y="156.506" width="344.339" height="29.52"></rect> </g><g> <rect y="268.748" width="344.339" height="29.531"></rect> </g></symbol>
+              </svg>
+              <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#setup" x="25%" y="27%"></use></svg>
+            </div>
+          </div>
+          <div id="_mobile_cart"></div>
+          <div id="_mobile_account"></div>
+          <div id="_mobile_seach_widget"></div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </header>

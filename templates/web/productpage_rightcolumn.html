@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <!-- Document Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--IE Compatibility Meta-->
+  <meta name="author" content="zytheme" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Mobile Phone Accessories ">
+  <link rel="icon" href="assets/images/favicon.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="assets/css/material-icons.min.css">
+  <link rel="stylesheet" href="assets/css/tether.min.css">
+  <script src="assets/js/tether.min.js"></script>
+
+  <!-- Stylesheets -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/css/theme.css" rel="stylesheet">
+ <link href="assets/css/responsive.css" rel="stylesheet">
+
+  <!-- JavaScripts -->   
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/owl.carousel.js"></script>
+  <script src="assets/js/animate.js"></script>
+  <script src="assets/js/totalstorage.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/parallax.js"></script>
+  <script src="assets/js/instafeed.js"></script>
+  <script src="assets/js/ishi.initialize.js"></script>
+  <script src="assets/js/support.js"></script>
+
+  <!-- Document Title -->
+  <title>Radon</title>
+</head>
+
+<body id="right_column_productpage">
+  <main>
+    <div id="menu_wrapper" class=""></div>
+    <!-- loader -->
+    <div id="spin-wrapper"></div>
+    <div id="siteloader">
+      <div class="loader"></div>
+    </div>
+    <!-- header -->
+    <header id="header" class="home">
+      <div class="nav-header">
+
+
+        <div class="header-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          <div class="ishiemailblock">
+            <div class="email-title">
+              Email :
+            </div>
+            <a href="{% url 'core:contact' %}" class="email-num">info@gmail.com</a>
+          </div>
+          <!-- <div class="announcement-bar hidden-sm-down">
+            <div class="announcement-title">
+                Today's Deal:
+            </div>
+            <div class="announcement-text">
+              Sale Off 50%
+            </div>
+          </div> -->
+        </div>
+
+        <!-- Ecommerce Area  -->
+        <!-- <div class="desktop-user-info col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="userinfo-inner">
+            <ul class="userinfo">
+              <li class="checkout">
+                <a  href="checkoutpage.html">Checkout</a>
+              </li>
+              <li class="wishlist">
+                <a href="mywishlistpage.html">Wishlist</a>
+              </li>
+              <li class="create_account">
+                <a href="{% url 'core:contact' %}" id="customer_register_link">Contact</a>
+              </li>    
+            </ul>
+          </div> 
+        </div> -->
+        <!-- Ecommerce Area  -->
+
+
+      </div>
+      <div class="header-top">
+        <!-- desktop_logo -->
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+          <div id="desktop_logo">
+            <a href="{% url 'core:index' %}">
+              <img class="logo img-responsive" src="assets/images/logo.png" alt="Demo Shop">
+            </a>
+          </div>
+        </div>              
+        
+        <div class="megamenu col-lg-7">
+          <!-- mega menu -->
+          <div id="_desktop_top_menu" class="menu js-top-menu hidden-sm-down">
+            <ul class="top-menu" id="top-menu" data-depth="0">  
+              <li class="cms-page" id="category-12">
+                <a class="dropdown-item" href="{% url 'core:index' %}" data-depth="0">
+                  Home
+                </a>
+              </li>
+             
+              <li class="cms-page" id="cms-page-4">
+                <a class="dropdown-item" href="{% url 'core:about' %}" data-depth="0">
+                  About
+                </a>
+              </li>
+              <li class="category" id="category-3">
+                <a class="dropdown-item" href="{% url 'core:products' %}" data-depth="0">Products</a>
+              </li>
+              <li class="category" id="category-1111">
+                <a class="dropdown-item" href="{% url 'core:gallery' %}" data-depth="0">Gallery</a>
+              </li>
+              <li class="cms-page" id="cms-page-1">
+                <a class="dropdown-item" href="{% url 'core:updates' %}" data-depth="0">
+                  Updates
+                </a>
+              </li>
+              <li class="cms-page" id="cms-page-1">
+                <a class="dropdown-item" href="{% url 'core:contact' %}" data-depth="0">
+                  Contact
+                </a>
+              </li>
+              
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+        <div class="header-right col-md-2 col-sm-6 col-xs-6">
+          <!-- shopping cart -->
+          <div id="_desktop_cart">
+                  <div class="blockcart cart-preview inactive">
+                    <div class="header">
+                      <!-- <span class="cart-link">
+                        <span class="cart-img">
+                          <span class="hidden-md-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">          
+                              <symbol id="shopping-cart" viewBox="0 0 700 700"><title>shopping-cart</title>
+                                    <path d="m150.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0"></path>
+                                      <path d="m446.855469 94.035156h-353.101563l-7.199218-40.300781c-4.4375-24.808594-23.882813-44.214844-48.699219-48.601563l-26.101563-4.597656c-5.441406-.96875-10.632812 2.660156-11.601562 8.097656-.964844 5.441407 2.660156 10.632813 8.101562 11.601563l26.199219 4.597656c16.53125 2.929688 29.472656 15.871094 32.402344 32.402344l35.398437 199.699219c4.179688 23.894531 24.941406 41.324218 49.199219 41.300781h210c22.0625.066406 41.546875-14.375 47.902344-35.5l47-155.800781c.871093-3.039063.320312-6.3125-1.5-8.898438-1.902344-2.503906-4.859375-3.980468-8-4zm-56.601563 162.796875c-3.773437 12.6875-15.464844 21.367188-28.699218 21.300781h-210c-14.566407.039063-27.035157-10.441406-29.5-24.800781l-24.699219-139.398437h336.097656zm0 0"></path>
+                                      <path d="m360.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0"></path>
+                              </symbol> 
+                            </svg>
+                            <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#shopping-cart" x="15%" y="17%"></use></svg>
+                          </span>
+                          <span class="hidden-lg-up">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">          
+                              <symbol id="cart-responsive" viewBox="0 0 510 510"><title>cart-responsive</title>
+                                <path d="M306.4,313.2l-24-223.6c-0.4-3.6-3.6-6.4-7.2-6.4h-44.4V69.6c0-38.4-31.2-69.6-69.6-69.6c-38.4,0-69.6,31.2-69.6,69.6
+                                 v13.6H46c-3.6,0-6.8,2.8-7.2,6.4l-24,223.6c-0.4,2,0.4,4,1.6,5.6c1.2,1.6,3.2,2.4,5.2,2.4h278c2,0,4-0.8,5.2-2.4
+                                 C306,317.2,306.8,315.2,306.4,313.2z M223.6,123.6c3.6,0,6.4,2.8,6.4,6.4c0,3.6-2.8,6.4-6.4,6.4c-3.6,0-6.4-2.8-6.4-6.4
+                                 C217.2,126.4,220,123.6,223.6,123.6z M106,69.6c0-30.4,24.8-55.2,55.2-55.2c30.4,0,55.2,24.8,55.2,55.2v13.6H106V69.6z
+                                 M98.8,123.6c3.6,0,6.4,2.8,6.4,6.4c0,3.6-2.8,6.4-6.4,6.4c-3.6,0-6.4-2.8-6.4-6.4C92.4,126.4,95.2,123.6,98.8,123.6z M30,306.4
+                                 L52.4,97.2h39.2v13.2c-8,2.8-13.6,10.4-13.6,19.2c0,11.2,9.2,20.4,20.4,20.4c11.2,0,20.4-9.2,20.4-20.4c0-8.8-5.6-16.4-13.6-19.2
+                                 V97.2h110.4v13.2c-8,2.8-13.6,10.4-13.6,19.2c0,11.2,9.2,20.4,20.4,20.4c11.2,0,20.4-9.2,20.4-20.4c0-8.8-5.6-16.4-13.6-19.2V97.2
+                                 H270l22.4,209.2H30z"></path>
+                              </symbol>
+                            </svg>
+                            <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#cart-responsive" x="13%" y="13%"></use></svg>
+                          </span>
+                          <span class="cart-products-count">3</span>
+                        </span>
+                      </span> -->
+                      <div class="cart-dropdown">
+                        <div class="product-container">
+                          <div class="product"> 
+                            <a class="product-image" href="productpage_fullwidth.html">
+                              <img src="assets/images/product/1.jpg" alt="Simul dolorem voluptaria">
+                            </a>
+                            <div class="product-detail">
+                              <div class="product-name">
+                                <span class="quantity-formated">
+                                  <span class="quantity">1</span>
+                                  &nbsp;x&nbsp;
+                                </span>
+                                <a class="cart_block_product_name" href="productpage_fullwidth.html">Simul dolorem voluptaria</a>
+                              </div>
+                              <div class="price">₹16.51</div>
+                              <ul class="product-atributes">
+                                <li class="atributes">
+                                  <span class="label">Size:</span>
+                                  <span class="value">S</span>
+                                </li>
+                                <li class="atributes">
+                                  <span class="label">Color:</span>
+                                  <span class="value">Orange</span>
+                                </li>
+                              </ul>
+                            </div> 
+                            <div class="remove-product">
+                              <a class="remove-from-cart" rel="nofollow" href="categorypage_fullwidth.html">
+                                <i class="material-icons">delete</i>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="product"> 
+                            <a class="product-image" href="productpage_fullwidth.html">
+                              <img src="assets/images/product/3.jpg" alt="Omnis dicam mentitum">
+                            </a>
+                            <div class="product-detail">
+                              <div class="product-name">
+                                <span class="quantity-formated">
+                                  <span class="quantity">1</span>
+                                  &nbsp;x&nbsp;
+                                </span>
+                                <a class="cart_block_product_name" href="productpage_fullwidth.html">Omnis dicam mentitum</a>
+                              </div>
+                              <div class="price">₹25.99</div>
+                              <ul class="product-atributes">
+                                <li class="atributes">
+                                  <span class="label">Size:</span>
+                                  <span class="value">S</span>
+                                </li>
+                                <li class="atributes">
+                                  <span class="label">Color:</span>
+                                  <span class="value">Orange</span>
+                                </li>
+                              </ul>
+                            </div> 
+                            <div class="remove-product">
+                              <a class="remove-from-cart" rel="nofollow" href="categorypage_fullwidth.html">
+                                <i class="material-icons">delete</i>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="product"> 
+                            <a class="product-image" href="productpage_fullwidth.html">
+                              <img src="assets/images/product/5.jpg" alt="Eled doming deserunt">
+                            </a>
+                            <div class="product-detail">
+                              <div class="product-name">
+                                <span class="quantity-formated">
+                                  <span class="quantity">1</span>
+                                  &nbsp;x&nbsp;
+                                </span>
+                                <a class="cart_block_product_name" href="productpage_fullwidth.html">Eled doming deserunt</a>
+                              </div>
+                              <div class="price">₹28.98</div>
+                              <ul class="product-atributes">
+                                <li class="atributes">
+                                  <span class="label">Size:</span>
+                                  <span class="value">S</span>
+                                </li>
+                                <li class="atributes">
+                                  <span class="label">Color:</span>
+                                  <span class="value">Yellow</span>
+                                </li>
+                              </ul>
+                            </div> 
+                            <div class="remove-product">
+                              <a class="remove-from-cart" rel="nofollow" href="categorypage_fullwidth.html">
+                                <i class="material-icons">delete</i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="billing-info">
+                            <div class="billing subtotal-info">
+                              <span class="label">Subtotal</span>
+                              <span class="value">₹71.48</span>
+                            </div>
+                            <div class="billing shipping-info">
+                              <span class="label">Shipping</span>
+                              <span class="value">₹7.00</span>
+                            </div>
+                            <div class="billing tax-info">
+                              <span class="label">Taxes</span>
+                              <span class="value">₹0.00</span>
+                            </div>
+                            <div class="billing total-info">
+                              <span class="label">Total</span>
+                              <span class="value">₹78.48</span>
+                            </div> 
+                        </div>
+                        <div class="cart-btn col-xs-12">
+                          <a href="checkoutpage.html" class="btn btn-primary checkout">Checkout</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        <!-- account -->  
+          <div id="_desktop_account">
+            <div class="account">
+              <!-- <span class="account-logo">
+                <span class="userinfo-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">          
+                    <symbol id="user-desktop" viewBox="0 0 480 480"><title>user-desktop</title>
+                      <path d="M187.497,152.427H73.974c-38.111,0-69.117,31.006-69.117,69.117v39.928h251.758v-39.928
+                         C256.614,183.433,225.608,152.427,187.497,152.427z M241.614,246.473H19.856v-24.928c0-29.84,24.277-54.117,54.117-54.117h113.523
+                         c29.84,0,54.117,24.277,54.117,54.117L241.614,246.473L241.614,246.473z"></path>
+                      <path d="M130.735,145.326c40.066,0,72.663-32.597,72.663-72.663S170.802,0,130.735,0S58.072,32.596,58.072,72.663
+                         S90.669,145.326,130.735,145.326z M130.735,15c31.796,0,57.663,25.867,57.663,57.663s-25.867,57.663-57.663,57.663
+                         s-57.663-25.868-57.663-57.663S98.939,15,130.735,15z"></path>
+                    </symbol> 
+                  </svg>
+                  <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#user-desktop" x="20%" y="20%"></use></svg>
+                </span>
+              </span> -->
+              <ul class="dropdown-menu account-dropdown">
+                <li class="user-signin">
+                  <a href="user-register.html" title="Log in to your customer account" rel="nofollow">
+                    <span>Sign in</span>
+                  </a>
+                </li>                    
+            </ul>
+            </div>
+          </div>
+        <!--  Block search  -->
+          <div id="_desktop_seach_widget">
+            <div id="search_widget" class="search-widget">
+              <span class="search-logo">
+                <span class="search-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">   
+                    <symbol id="magnifying-desktop" viewBox="0 0 1200 1200"><title>magnifying-desktop</title>
+                      <path d="M606.209,578.714L448.198,423.228C489.576,378.272,515,318.817,515,253.393C514.98,113.439,399.704,0,257.493,0
+                           C115.282,0,0.006,113.439,0.006,253.393s115.276,253.393,257.487,253.393c61.445,0,117.801-21.253,162.068-56.586
+                           l158.624,156.099c7.729,7.614,20.277,7.614,28.006,0C613.938,598.686,613.938,586.328,606.209,578.714z M257.493,467.8
+                           c-120.326,0-217.869-95.993-217.869-214.407S137.167,38.986,257.493,38.986c120.327,0,217.869,95.993,217.869,214.407
+                           S377.82,467.8,257.493,467.8z"></path>
+                     </symbol>
+                  </svg>
+                  <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#magnifying-desktop" x="20%" y="22%"></use></svg>
+              </span>
+              </span>
+              <form method="get" action="https://demo.ishithemes.com/html/fabulous/Layout004/categorypage_fullwidth.html">
+                <input name="s" value="" placeholder="Search" class="ui-autocomplete-input" autocomplete="off" type="text">
+                <button type="submit">
+                  <i class="material-icons search"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="nav-full-width">
+        <div class="container">
+          <div class="row">
+          <!-- mobile media -->
+            <div id="menu-icon" class="menu-icon hidden-lg-up">
+              <div class="menu-block">
+                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">   
+                  <symbol id="setup" viewBox="0 0 750 750"><title>setup</title><g> <rect y="46.06" width="344.339" height="29.52"></rect> </g><g> <rect y="156.506" width="344.339" height="29.52"></rect> </g><g> <rect y="268.748" width="344.339" height="29.531"></rect> </g></symbol>
+                </svg>
+                <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#setup" x="25%" y="27%"></use></svg>
+              </div>
+            </div>
+            <div id="_mobile_cart"></div>
+            <div id="_mobile_account"></div>
+            <div id="_mobile_seach_widget"></div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- mobile media -->
+    <div id="mobile_top_menu_wrapper" class="hidden-lg-up" style="display:none;">
+      <div id="top_menu_closer">
+        <i class="material-icons"></i>
+      </div>
+      <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
+    </div>
+    <!-- breadcrumb -->
+    <div class="breadcrumb-container">
+      <nav data-depth="5" class="breadcrumb container">
+        <h3 class="h1 product-title breadcrumb-title">Simul dolorem voluptaria</h3>
+        <ol>
+          <li>
+            <a href="{% url 'core:index' %}">
+              <span>Home</span>
+            </a>
+          </li>
+          <li >
+            <a  href="{% url 'core:products' %}">
+              <span>Women</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'core:products' %}">
+              <span>Tops</span>
+            </a>
+          </li>
+          <li>
+            <a  href="{% url 'core:products' %}">
+              <span>T-shirts</span>
+            </a>
+          </li>
+          <li>
+              <span>Simul dolorem voluptaria</span>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <!-- section -->
+    <div id="wrapper">
+      <div class="container">
+        <div class="row">
+          <div id="content-wrapper" class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+            <section id="main">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="page-content" id="content">
+                    <ul class="product-flags">
+                      <li class="product-flag new">New</li>
+                    </ul>
+                    <div class="images-container">
+                      <div class="product-cover">
+                        <div id="product-zoom">
+                          <img class="js-qv-product-cover" src="assets/images/product/1.jpg" alt="product-image" title="product-image" style="width:100%;">
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="js-qv-mask mask">
+                          <ul class="qv-carousel product-images owl-carousel">
+                            <li class="thumb-container item">
+                              <img
+                              class="thumb js-thumb  selected "
+                              src="assets/images/product/2.jpg"
+                              alt="related-items"
+                              title=""
+                              data-image-large-src="assets/images/product/2.jpg"
+                              width="100"
+                              >
+                            </li>
+                            <li class="thumb-container item">
+                              <img
+                              class="thumb js-thumb "
+                              src="assets/images/product/3.jpg"
+                              alt="related-items"
+                              title=""
+                              data-image-large-src="assets/images/product/3.jpg"
+                              width="100"
+                              >
+                            </li>
+                            <li class="thumb-container item">
+                              <img
+                              class="thumb js-thumb "
+                              src="assets/images/product/5.jpg"
+                              alt="related-items"
+                              title=""
+                              data-image-large-src="assets/images/product/5.jpg"
+                              width="100"
+                              >
+                            </li>
+                            <li class="thumb-container item">
+                              <img
+                              class="thumb js-thumb "
+                              src="assets/images/product/6.jpg"
+                              alt="related-items"
+                              title=""
+                              data-image-large-src="assets/images/product/6.jpg"
+                              width="100"
+                              >
+                            </li>
+                            <li class="thumb-container item">
+                              <img
+                              class="thumb js-thumb "
+                              src="assets/images/product/7.jpg"
+                              alt="related-items"
+                              title=""
+                              data-image-large-src="assets/images/product/7.jpg"
+                              width="100"
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="scroll-box-arrows">
+                      <i class="material-icons left">&#xE314;</i>
+                      <i class="material-icons right">&#xE315;</i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 productfullldetails">
+                  <h3 class="h1 product-title"><a href="productpage_fullwidth.html">Aroma Mocha</a></h3>
+                  <div class="product-information">
+                    <div id="product-description-short-1">
+                      <p>Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!</p>
+                    </div>
+                    <div class="product-comments display_comments">  
+                      <div class="star_content">
+                        <div class="star star_on"></div>
+                        <div class="star star_on"></div>
+                        <div class="star star_on"></div>
+                        <div class="star star_on"></div>
+                        <div class="star star_on"></div>
+                      </div>
+                      <div class="comment_advice">
+                        <a href="#tab-review" class="read_comment scrollLink"><i class="material-icons comments" aria-hidden="true"></i>Read Reviews</a>
+                        <a href="#tab-review"  class="write_comment scrollLink"><i class="material-icons comments" aria-hidden="true"></i>Write Review</a>
+                      </div>
+                      <span>5 review</span>
+                    </div>
+                    <div class="product-actions">
+                        <form action="#" method="post" id="add-to-cart-or-refresh">
+                          <input type="hidden" name="token" value="3d2187fdc78a54510e1e1670c3ff42b0">
+                          <input type="hidden" name="id_product" value="1" id="product_page_product_id">
+                          <input type="hidden" name="id_customization" value="0" id="product_customization_id">
+                          <div class="product-variants">
+                            <div class="clearfix product-variants-item">
+                              <span class="control-label">Size</span>
+                              <select
+                              class=" form-control-select"
+                              id="group_1"
+                              data-product-attribute="1"
+                              name="group[1]">
+                              <option value="1" title="S" selected="selected">S</option>
+                              <option value="2" title="M">M</option>
+                              <option value="3" title="L">L</option>
+                              </select>
+                            </div>
+                            <div class="clearfix product-variants-item">
+                              <span class="control-label">Color</span>
+                              <ul id="group_3">
+                                <li class="float-xs-left input-container">
+                                  <label>
+                                    <input class="input-color" type="radio" data-product-attribute="3" name="group[3]" value="13" checked="checked">
+                                    <span class="color" style="background-color: #F39C11">
+                                    <span class="sr-only">Orange</span></span>
+                                  </label>
+                                </li>
+                                <li class="float-xs-left input-container">
+                                  <label>
+                                    <input class="input-color" type="radio" data-product-attribute="3" name="group[3]" value="14">
+                                    <span class="color" style="background-color: #5D9CEC">
+                                    <span class="sr-only">Blue</span></span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="product-prices">
+                            <div class="product-price h5">
+                              <div class="current-price">
+                                <span>₹50.00</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="product-add-to-cart">
+                            <div class="product-quantity-selector form-control-select">
+                                  <p>Quantity</p>
+                                  <div class="quantity-counter">
+                                    <i class="fa fa-caret-left dec button qtyminus "><span>-</span></i>
+                                    <input name="quantity" value="1" class="quantity">
+                                    <i class="fa fa-caret-right inc button qtyplus"><span>+</span></i>
+                                  </div>      
+                            </div>
+                            <div class="product-quantity clearfix">
+                              <div class="add">
+                                <button
+                                  class="btn btn-primary add-to-cart"
+                                  data-button-action="add-to-cart"
+                                  type="submit"
+                                  >
+                                  <i class="material-icons shopping-cart">&#xE547;</i>
+                                  Add to cart
+                                </button>
+                              </div>
+                              <div class="buttons_bottom_block no-print wishlist_login">
+                                <a class="wishlist_button" href="mywishlistpage.html" title="Add to my wishlist">
+                                  <i class="fa fa-heart"></i><span class="tooltip-label">Add to wishlist</span>
+                                </a>
+                              </div>
+                              <div id="product-availability">
+                                <i class="material-icons product-available">&#xE5CA;</i>
+                                In stock
+                              </div>
+                            </div>
+                          </div>
+                          <div class="product-additional-info">
+                            <div class="social-sharing">
+                              <span>Share</span>
+                              <ul>
+                                <li class="facebook icon-gray">
+                                  <a href="#" class="text-hide" title="Share" target="_blank">Share</a>
+                                </li>
+                                <li class="twitter icon-gray">
+                                  <a href="#" class="text-hide" title="Tweet" target="_blank">Tweet</a>
+                                </li>
+                                <li class="googleplus icon-gray">
+                                  <a href="#" class="text-hide" title="Google+" target="_blank">Google+</a>
+                                </li>
+                                <li class="pinterest icon-gray"><a href="#" class="text-hide" title="Pinterest" target="_blank">Pinterest</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 paymentlogo-container">
+                              <span>Payment</span>
+                              <img src="assets/images/paymenticon/1.png" alt="Discover"/>
+                              <img src="assets/images/paymenticon/2.png" alt="Visa" />
+                              <img src="assets/images/paymenticon/3.png" alt="JCB" />
+                              <img src="assets/images/paymenticon/4.png" alt="PayPal" />
+                              <img src="assets/images/paymenticon/5.png" alt="Master Card" />
+                              <img src="assets/images/paymenticon/6.png" alt="American Express" />
+                            </div>
+                          </div>
+                          <div id="block-reassurance">
+                            <ul>
+                              <li>
+                                <div class="block-reassurance-item">
+                                  <img src="assets/images/block-reassurance/1.png" alt="Security policy (edit with Customer reassurance module)">
+                                  <span class="h6">Security policy (edit with Customer reassurance module)</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="block-reassurance-item">
+                                  <img src="assets/images/block-reassurance/2.png" alt="Delivery policy (edit with Customer reassurance module)">
+                                  <span class="h6">Delivery policy (edit with Customer reassurance module)</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="block-reassurance-item">
+                                  <img src="assets/images/block-reassurance/3.png" alt="Return policy (edit with Customer reassurance module)">
+                                  <span class="h6">Return policy (edit with Customer reassurance module)</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row product-block-information">
+                <div class="col-sm-12 product-details">
+                  <div class="tabs">
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li class="nav-item">
+                       <a
+                       class="nav-link active"
+                       data-toggle="tab"
+                       href="#description"
+                       role="tab"
+                       aria-controls="description"
+                       aria-selected="true">Description</a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                        class="nav-link"
+                        data-toggle="tab"
+                        href="#product-details"
+                        role="tab"
+                        aria-controls="product-details"
+                        >Product Details</a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                        class="nav-link"
+                        data-toggle="tab"
+                        href="#tab-review"
+                        role="tab"
+                        aria-controls="product-details"
+                        >reviews</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="tab-content">
+                      <div class="tab-pane show active" id="description" role="tabpanel">
+                        <div class="product-description">
+                          <p>Fashion has been creating well-designed collections since 2010. The brand offers feminine designs delivering stylish separates and statement dresses which have since evolved into a full ready-to-wear collection in which every item is a vital part of a woman's wardrobe. The result? Cool, easy, chic looks with youthful elegance and unmistakable signature style. All the beautiful pieces are made in Italy and manufactured with the greatest attention. Now Fashion extends to a range of accessories including shoes, hats, belts and more!</p>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="product-details" role="tabpanel" >
+                        <div class="product-manufacturer">
+                          <a href="{% url 'core:products' %}">
+                            <img src="assets/images/product-brandlogo.png" class="img img-thumbnail manufacturer-logo" alt="Fashion Manufacturer 1">
+                          </a>
+                        </div>
+                        <div class="product-reference">
+                          <label class="label">Reference </label>
+                          <span>demo_1</span>
+                        </div>
+                        <div class="product-quantities">
+                          <label class="label">In stock</label>
+                          <span data-stock="294" data-allow-oosp="0">294 Items</span>
+                        </div>
+                        <div class="product-out-of-stock"></div>
+                        <section class="product-features">
+                          <h3 class="h6">Data sheet</h3>
+                          <dl class="data-sheet">
+                            <dt class="name">Compositions</dt>
+                            <dd class="value">Cotton</dd>
+                            <dt class="name">Styles</dt>
+                            <dd class="value">Casual</dd>
+                            <dt class="name">Properties</dt>
+                            <dd class="value">Short Sleeve</dd>
+                          </dl>
+                        </section>
+                      </div>
+                      <div class="tab-pane" id="tab-review" role="tabpanel">
+                       <form class="form-horizontal " id="form-review">
+                          <div id="review">
+                            <p>There are no reviews for this product.</p>
+                          </div>
+                          <h2>Write a review</h2>
+                          <div class="form-group required">
+                            <div class="col-sm-12">
+                              <input name="name" value="" id="input-name" class="form-control" type="text" placeholder="Your Name">
+                            </div>
+                          </div>
+                          <div class="form-group required">
+                            <div class="col-sm-12">
+                              <textarea name="text" rows="5" id="input-review" class="form-control"  placeholder="Your Review"></textarea>
+                              <div class="help-block"> HTML is not translated!</div>
+                            </div>
+                          </div>
+                          <div class="form-group required">
+                            <div class="col-sm-12">
+                              <label class="control-label">Rating</label>
+                              <span class="custom-radio">
+                                <input name="rating" value="1" type="radio">
+                                <span></span>
+                              </span>
+                              <span class="custom-radio">
+                                <input name="rating" value="2" type="radio">
+                                <span></span>
+                              </span>
+                              <span class="custom-radio">
+                                <input name="rating" value="3" type="radio">
+                                <span></span>
+                              </span>
+                              <span class="custom-radio">
+                                <input name="rating" value="4" type="radio">
+                                <span></span>
+                              </span>
+                              <span class="custom-radio">
+                                <input name="rating" value="5" type="radio">
+                                <span></span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="buttons clearfix">
+                            <div class="pull-right">
+                              <button type="button" id="button-review" data-loading-text="Loading..." class="btn btn-primary">Continue</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <section class="product-accessories-block clearfix">
+                  <div class="section-header text-center">
+                      <div class="subtitle">THE PRODUCTS</div>
+                      <h2 class="title">Related Products</h2>
+                  </div>
+                  <div class="block_content">
+                    <div id="ishi-product-accessories" class="owl-carousel">
+                      <div class="product-thumb">
+                        <div class="item product-container">
+                          <div class="image">
+                            <a href="{% url 'core:products' %}" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/9.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/10.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <span class="outstock-overlay">SOLD OUT</span>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>  
+                          </div>
+                          <div class="caption"> 
+                            <div class="product-title"><a href="{% url 'core:products' %}">Authletic Stud</a></div>
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p>
+                            <p class="price">
+                              <span class="price-sale">₹80.00</span> 
+                            </p>
+                          </div> 
+                        </div>
+                      </div>
+                      <div class="product-thumb">
+                        <div class="item product-container">
+                          <div class="image">
+                            <a href="{% url 'core:products' %}" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/11.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/12.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>  
+                          </div>
+                          <div class="caption"> 
+                            <div class="product-title"><a href="{% url 'core:products' %}">Skillofun  Junior</a></div>
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p>
+                            <p class="price">
+                              <span class="price-sale">₹64.00 </span>
+                            </p>
+                          </div> 
+                        </div>
+                      </div>
+                      <div class="product-thumb">
+                        <div class="item product-container">
+                          <div class="image">
+                            <a href="{% url 'core:products' %}" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/16.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/17.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>  
+                          </div>
+                          <div class="caption">
+                            <div class="product-title"><a href="{% url 'core:products' %}">Crinkle Leaf</a></div>
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p>
+                            <p class="price">
+                              <span class="price-sale">₹60.00 </span>
+                            </p>
+                          </div> 
+                        </div>
+                      </div>
+                      <div class="product-thumb">
+                        <div class="item product-container">
+                          <div class="image">
+                            <a href="{% url 'core:products' %}" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/18.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/19.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div> 
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>   
+                          </div>
+                          <div class="caption"> 
+                            <div class="product-title"><a href="{% url 'core:products' %}">corporis suscipit</a></div>
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p>
+                            <p class="price">
+                              <span class="price-sale">₹50.00 </span>
+                            </p>  
+                          </div> 
+                        </div>
+                      </div>
+                      <div class="product-thumb">
+                        <div class="item product-container">
+                          <div class="image">
+                            <a href="{% url 'core:products' %}" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/20.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/1.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>  
+                            <div class="product-flags">
+                              <div class="sale">Sale</div>
+                            </div>
+                          </div>
+                          <div class="caption"> 
+                            <div class="product-title"><a href="{% url 'core:products' %}">Aroma Mocha</a></div>  
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p>
+                            <p class="price">
+                              <span class="regular price-old">₹55.00</span> 
+                              <span class="price-discount">9%</span> 
+                              <span class="price-sale">₹50.00 </span>
+                            </p> 
+                          </div> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </section>
+          </div>
+          <div id="_desktop_right_column" class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+            <div id="right-column">
+              <div class="category-block-container">
+                <div class="block-title clearfix hidden-lg-up collapsed" data-target="#subcategories-container" data-toggle="collapse">
+                  <span class="h1 products-section-title text-uppercase">
+                    <a class="text-uppercase h6" href="categorypage_fullwidth.html">Women</a>
+                  </span>
+                  <span class="navbar-toggler collapse-icons">
+                    <i class="material-icons add">&#xE313;</i>
+                    <i class="material-icons remove">&#xE316;</i>
+                  </span>    
+                </div>
+                <h3 class="hidden-md-down">
+                  <a class="block-title text-uppercase h6" href="categorypage_fullwidth.html">Women</a>
+                </h3>
+                <div id="subcategories-container" class="block-categories collapse data-toggler">
+                  <ul class="category-top-menu">
+                    <li>
+                      <ul class="category-sub-menu">
+                        <li data-depth="0">
+                          <a href="categorypage_fullwidth.html">Tops</a>
+                          <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar4">
+                            <i class="material-icons add">&#xE145;</i>
+                            <i class="material-icons remove">&#xE15B;</i>
+                          </div>
+                          <div class="collapse" id="exCollapsingNavbar4">  
+                            <ul class="category-sub-menu">
+                              <li data-depth="1">
+                                <a class="category-sub-link" href="categorypage_fullwidth.html">T-shirts</a>
+                              </li>
+                              <li data-depth="1">
+                                <a class="category-sub-link" href="categorypage_fullwidth.html">Blouses</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li data-depth="0">
+                          <a href="categorypage_fullwidth.html">Dresses</a>
+                          <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar8">
+                            <i class="material-icons add">&#xE145;</i>
+                            <i class="material-icons remove">&#xE15B;</i>
+                          </div>
+                          <div class="collapse" id="exCollapsingNavbar8"> 
+                            <ul class="category-sub-menu">
+                              <li data-depth="1">
+                                <a class="category-sub-link" href="categorypage_fullwidth.html">Casual Dresses</a>
+                              </li>
+                              <li data-depth="1">
+                                <a class="category-sub-link" href="categorypage_fullwidth.html">Evening Dresses</a>
+                              </li>
+                              <li data-depth="1">
+                                <a class="category-sub-link" href="categorypage_fullwidth.html">Summer Dresses</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li data-depth="0">
+                          <a href="categorypage_fullwidth.html">Sarees</a>
+                          <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar14">
+                            <i class="material-icons add">&#xE145;</i>
+                            <i class="material-icons remove">&#xE15B;</i>
+                          </div>
+                          <div class="collapse" id="exCollapsingNavbar14">  
+                            <ul class="category-sub-menu">
+                              <li data-depth="1">
+                                <a class="category-sub-link" href="categorypage_fullwidth.html">Printed</a>
+                              </li>
+                              <li data-depth="1">
+                                <a class="category-sub-link" href="categorypage_fullwidth.html">Trackwear</a>
+                              </li>
+                              <li data-depth="1">
+                                <a class="category-sub-link" href="categorypage_fullwidth.html">Summer Wear</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>  
+              </div>
+              <div id="search_filters_wrapper">
+                <div class="block-title clearfix hidden-lg-up collapsed" data-target="#search_filters" data-toggle="collapse">
+                  <span class="h1 products-section-title text-uppercase">
+                    <a class="text-uppercase h6" href="javascript:void(0)">Filter</a>
+                  </span>
+                  <span class="navbar-toggler collapse-icons">
+                    <i class="material-icons add">&#xE313;</i>
+                    <i class="material-icons remove">&#xE316;</i>
+                  </span>    
+                </div>
+                <div id="search_filters" class="collapse data-toggler"> 
+                  <h3 class="hidden-md-down">
+                    <a class="block-title text-uppercase h6" href="javascript:void(0)">Filter</a>
+                  </h3> 
+                  <div id="_desktop_search_filters_clear_all" class="hidden-md-down clear-all-wrapper">
+                    <button data-search-url="javascript:void(0)" class="btn btn-tertiary js-search-filters-clear-all"><i class="material-icons">&#xE14C;</i> Clear all</button>
+                  </div> 
+                  <div class="facet clearfix">
+                    <h1 class="h6 facet-title hidden-md-down">Categories</h1>
+                    <div class="title hidden-lg-up collapsed" data-target="#facet_71002" data-toggle="collapse">
+                      <h1 class="h6 facet-title">Categories</h1>
+                      <span class="float-xs-right">
+                        <span class="navbar-toggler collapse-icons">
+                          <i class="material-icons add">&#xE313;</i>
+                          <i class="material-icons remove">&#xE316;</i>
+                        </span>
+                      </span>
+                    </div>
+                    <ul id="facet_71002" class="collapse">
+                      <li>
+                        <label class="facet-label" for="facet_input_71002_0">
+                          <span class="custom-checkbox">
+                            <input id="facet_input_71002_0" data-search-url="javascript:void(0)" type="checkbox">
+                            <span  class="ps-shown-by-js" ><i class="material-icons checkbox-checked">&#xE5CA;</i></span>
+                          </span>                        
+                          <a href="categorypage_fullwidth.html" class="_gray-darker search-link js-search-link" rel="nofollow">Tops<span class="magnitude">(19)</span></a>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="facet-label" for="facet_input_71002_1">
+                          <span class="custom-checkbox">
+                            <input id="facet_input_71002_1" data-search-url="javascript:void(0)" type="checkbox">
+                            <span  class="ps-shown-by-js" ><i class="material-icons checkbox-checked">&#xE5CA;</i></span>
+                          </span>
+                          <a  href="categorypage_fullwidth.html" class="_gray-darker search-link js-search-link" rel="nofollow">Dresses<span class="magnitude">(20)</span></a>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="facet clearfix">
+                    <h1 class="h6 facet-title hidden-md-down">Size</h1>
+                    <div class="title hidden-lg-up collapsed" data-target="#facet_41135" data-toggle="collapse">
+                      <h1 class="h6 facet-title">Size</h1>
+                      <span class="float-xs-right">
+                        <span class="navbar-toggler collapse-icons">
+                          <i class="material-icons add">&#xE313;</i>
+                          <i class="material-icons remove">&#xE316;</i>
+                        </span>
+                      </span>
+                    </div>
+                    <ul id="facet_41135" class="collapse">
+                      <li>
+                        <label class="facet-label" for="facet_input_41135_0">
+                          <span class="custom-checkbox">
+                            <input id="facet_input_41135_0" data-search-url="javascript:void(0)" type="checkbox">
+                            <span  class="ps-shown-by-js" ><i class="material-icons checkbox-checked">&#xE5CA;</i></span>
+                          </span>
+                          <a href="categorypage_fullwidth.html" class="_gray-darker search-link js-search-link" rel="nofollow">S<span class="magnitude">(7)</span></a>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="facet-label" for="facet_input_41135_1">
+                          <span class="custom-checkbox">
+                            <input id="facet_input_41135_1" data-search-url="javascript:void(0)" type="checkbox">
+                            <span  class="ps-shown-by-js" ><i class="material-icons checkbox-checked">&#xE5CA;</i></span>
+                          </span>
+                           <a href="categorypage_fullwidth.html" class="_gray-darker search-link js-search-link" rel="nofollow">M<span class="magnitude">(7)</span></a>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="facet-label" for="facet_input_41135_2">
+                          <span class="custom-checkbox">
+                            <input id="facet_input_41135_2" data-search-url="javascript:void(0)" type="checkbox">
+                             <span  class="ps-shown-by-js" ><i class="material-icons checkbox-checked">&#xE5CA;</i></span>
+                          </span>
+                          <a href="categorypage_fullwidth.html" class="_gray-darker search-link js-search-link" rel="nofollow">L<span class="magnitude">(7)</span></a>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="facet clearfix">
+                    <h1 class="h6 facet-title hidden-md-down">Color</h1>
+                    <div class="title hidden-lg-up collapsed" data-target="#facet_56250" data-toggle="collapse">
+                      <h1 class="h6 facet-title">Color</h1>
+                      <span class="float-xs-right">
+                        <span class="navbar-toggler collapse-icons">
+                          <i class="material-icons add">&#xE313;</i>
+                          <i class="material-icons remove">&#xE316;</i>
+                        </span>
+                      </span>
+                    </div>
+                    <ul id="facet_56250" class="collapse">
+                      <li>
+                        <label class="facet-label" for="facet_input_56250_0">
+                          <span class="custom-checkbox">
+                            <input id="facet_input_56250_0" data-search-url="javascript:void(0)" type="checkbox">
+                            <span class="color" style="background-color:#f5f5dc"></span>
+                          </span>
+                          <a href="categorypage_fullwidth.html" class="_gray-darker search-link js-search-link" rel="nofollow">Beige<span class="magnitude">(1)</span></a>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="facet-label" for="facet_input_56250_1">
+                          <span class="custom-checkbox">
+                            <input id="facet_input_56250_1" data-search-url="javascript:void(0)" type="checkbox">
+                            <span class="color" style="background-color:#ffffff"></span>
+                          </span>
+                          <a href="categorypage_fullwidth.html" class="_gray-darker search-link js-search-link" rel="nofollow">White<span class="magnitude">(2)</span></a>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="facet-label" for="facet_input_56250_2">
+                          <span class="custom-checkbox">
+                            <input id="facet_input_56250_2" data-search-url="javascript:void(0)" type="checkbox">
+                            <span class="color" style="background-color:#434A54"></span>
+                          </span>
+                          <a href="categorypage_fullwidth.html" class="_gray-darker search-link js-search-link" rel="nofollow">Black<span class="magnitude">(2)</span></a>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="facet-label" for="facet_input_56250_3">
+                          <span class="custom-checkbox">
+                            <input id="facet_input_56250_3" data-search-url="javascript:void(0)" type="checkbox">
+                            <span class="color" style="background-color:#F39C11"></span>
+                          </span>
+                          <a href="categorypage_fullwidth.html" class="_gray-darker search-link js-search-link" rel="nofollow">Orange<span class="magnitude">(3)</span></a>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="facet-label" for="facet_input_56250_4">
+                          <span class="custom-checkbox">
+                            <input id="facet_input_56250_4" data-search-url="javascript:void(0)" type="checkbox">
+                            <span class="color" style="background-color:#5D9CEC"></span>
+                          </span>
+                          <a href="categorypage_fullwidth.html" class="_gray-darker search-link js-search-link" rel="nofollow">Blue<span class="magnitude">(2)</span></a>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="facet-label" for="facet_input_56250_5">
+                          <span class="custom-checkbox">
+                            <input id="facet_input_56250_5" data-search-url="javascript:void(0)" type="checkbox">
+                            <span class="color" style="background-color:#A0D468"></span>
+                          </span>
+                          <a href="categorypage_fullwidth.html" class="_gray-darker search-link js-search-link" rel="nofollow">Green<span class="magnitude">(1)</span></a>
+                        </label>
+                      </li> 
+                    </ul>
+                  </div>
+                  <div class="facet clearfix">
+                    <h1 class="h6 facet-title hidden-md-down">Compositions</h1>
+                    <div class="title hidden-lg-up collapsed" data-target="#facet_91981" data-toggle="collapse">
+                      <h1 class="h6 facet-title">Compositions</h1>
+                      <span class="float-xs-right">
+                        <span class="navbar-toggler collapse-icons">
+                          <i class="material-icons add">&#xE313;</i>
+                          <i class="material-icons remove">&#xE316;</i>
+                        </span>
+                      </span>
+                    </div>
+                    <ul id="facet_91981" class="collapse">
+                      <li>
+                        <label class="facet-label" for="facet_input_91981_0">
+                            <span class="custom-checkbox">
+                              <input id="facet_input_91981_0" data-search-url="javascript:void(0)" type="checkbox">
+                              <span  class="ps-shown-by-js" ><i class="material-icons checkbox-checked">&#xE5CA;</i></span>
+                            </span>
+                            <a href="categorypage_fullwidth.html" class="_gray-darker search-link js-search-link" rel="nofollow">Cotton<span class="magnitude">(3)</span></a>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="facet-label" for="facet_input_91981_1">
+                          <span class="custom-checkbox">
+                            <input id="facet_input_91981_1" data-search-url="javascript:void(0)" type="checkbox">
+                            <span  class="ps-shown-by-js" ><i class="material-icons checkbox-checked">&#xE5CA;</i></span>
+                          </span>
+                          <a href="categorypage_fullwidth.html" class="_gray-darker search-link js-search-link" rel="nofollow">Polyester<span class="magnitude">(2)</span></a>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="facet-label" for="facet_input_91981_2">
+                          <span class="custom-checkbox">
+                            <input id="facet_input_91981_2" data-search-url="javascript:void(0)" type="checkbox">
+                            <span  class="ps-shown-by-js" ><i class="material-icons checkbox-checked">&#xE5CA;</i></span>
+                          </span>
+                          <a href="categorypage_fullwidth.html" class="_gray-darker search-link js-search-link" rel="nofollow">
+                          Viscose<span class="magnitude">(2)</span></a>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="facet clearfix">
+                    <div class="popular-blog clearfix"> 
+                      <h1 class="h6 facet-title hidden-md-down">Popular Tag</h1>
+                      <div class="title hidden-lg-up collapsed" data-target="#facet_91982" data-toggle="collapse">
+                        <h1 class="h6 facet-title">Popular Tag</h1>
+                        <span class="float-xs-right">
+                          <span class="navbar-toggler collapse-icons">
+                            <i class="material-icons add">&#xE313;</i>
+                            <i class="material-icons remove">&#xE316;</i>
+                          </span>
+                        </span>
+                      </div>
+                      <ul id="facet_91982" class="collapse">
+                        <li><a href="javascript: void(0)">Home</a></li>
+                        <li><a href="javascript: void(0)">Top</a></li>
+                        <li><a href="javascript: void(0)">Blouses</a></li>
+                        <li><a href="javascript: void(0)">Dress</a></li>
+                        <li><a href="javascript: void(0)">Outfits</a></li>
+                        <li><a href="javascript: void(0)">Accessories</a></li>
+                        <li><a href="javascript: void(0)">Blog</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <section class="featured-products clearfix mt-3"> 
+                <h3 class="h1 products-section-title block-title hidden-md-down">New products</h3>
+                <div class="block-title clearfix  hidden-lg-up collapsed" data-target="#newproducts-container" data-toggle="collapse">
+                  <span class="products-section-title">New products</span>
+                  <span class="navbar-toggler collapse-icons">
+                    <i class="material-icons add">&#xE313;</i>
+                    <i class="material-icons remove">&#xE316;</i>
+                  </span>
+                </div>
+                <div id="newproducts-container" class="collapse data-toggler">
+                  <div class="products">              
+                    <div class="product-miniature js-product-miniature">
+                      <div class="product-container">
+                        <div class="image">                  
+                          <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                            <img src="assets/images/product/1.jpg" alt="Pellentesque et pharetra">
+                          </a>    
+                        </div>
+                        <div class="caption">
+                          <div class="product-title"><a href="productpage_leftcolumn.html">Pellentesque et pharetra</a></div>
+                          <div class="product-price-and-shipping">
+                            <span class="sr-only">Regular price</span>
+                            <span class="regular-price">₹50.00</span>
+                            <span class="discount-percentage discount-product">-10%</span>
+                            <span class="sr-only">Price</span>
+                            <span  class="price">₹45.00</span>
+                          </div>                            
+                        </div>   
+                      </div>
+                    </div>
+                    <div class="product-miniature js-product-miniature">
+                      <div class="product-container">
+                        <div class="image">                  
+                          <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                            <img src="assets/images/product/2.jpg" alt="Pellentesque et pharetra">
+                          </a>    
+                        </div>
+                        <div class="caption">
+                          <div class="product-title"><a href="productpage_leftcolumn.html">Vis feugiat delenit</a></div>
+                          <div class="product-price-and-shipping"> 
+                            <span class="sr-only">Regular price</span>
+                            <span class="regular-price">₹23.00</span>
+                            <span class="discount-percentage discount-product">-5%</span>
+                            <span class="sr-only">Price</span>
+                            <span  class="price">₹21.85</span>
+                          </div>                            
+                        </div>   
+                      </div>
+                    </div>
+                    <div class="product-miniature js-product-miniature">
+                      <div class="product-container">
+                        <div class="image">                  
+                          <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                            <img src="assets/images/product/3.jpg" alt="Pellentesque et pharetra">
+                          </a>    
+                        </div>
+                        <div class="caption">
+                          <div class="product-title"><a href="productpage_leftcolumn.html">Curabitur laoret luctus</a></div>
+                          <div class="product-price-and-shipping">
+                            <span class="sr-only">Price</span>
+                            <span  class="price">₹50.00</span>
+                          </div>                            
+                        </div>   
+                      </div>
+                    </div>
+                    <div class="product-miniature js-product-miniature">
+                      <div class="product-container">
+                        <div class="image">                  
+                          <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                            <img src="assets/images/product/4.jpg" alt="Pellentesque et pharetra">
+                          </a>    
+                        </div>
+                        <div class="caption">
+                          <div class="product-title"><a href="productpage_leftcolumn.html">Aliquam fringilla juste</a></div>
+                          <div class="product-price-and-shipping">
+                            <span class="sr-only">Price</span>
+                            <span  class="price">₹24.00</span>
+                          </div>                            
+                        </div>   
+                      </div>
+                    </div>
+                  </div>
+                  <a class="all-product-link h4" href="productpage_leftcolumn.html">All new products <i class="material-icons">&#xE315;</i></a>
+                </div>
+              </section>
+              <div id="ishileftbanners" class="clearfix">
+                <div class="image-container">
+                  <a class="ishi-customhover-fadeinflip" href="categorypage_fullwidth.html">  
+                    <img src="assets/images/leftbanner.jpg" alt="leftbanner1">
+                  </a>
+                </div>
+              </div>
+              <section class="featured-products clearfix mt-3">
+                <h3 class="h1 products-section-title block-title hidden-md-down">Popular Products</h3>
+                <div class="block-title clearfix hidden-lg-up collapsed" data-target="#bestsellers-container" data-toggle="collapse">
+                  <span class="products-section-title">Popular Products</span>
+                  <span class="navbar-toggler collapse-icons">
+                    <i class="material-icons add">&#xE313;</i>
+                    <i class="material-icons remove">&#xE316;</i>
+                  </span>    
+                </div>
+                <div id="bestsellers-container" class="collapse data-toggler">
+                    <div class="products">
+                      <div class="product-miniature js-product-miniature">
+                        <div class="product-container">
+                          <div class="image">                  
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/5.jpg" alt="Pellentesque et pharetra">
+                            </a>    
+                          </div>
+                          <div class="caption">
+                            <div class="product-title"><a href="productpage_leftcolumn.html">Simul dolorem voluptaria</a></div>
+                            <div class="product-price-and-shipping">
+                              <span class="sr-only">Price</span>
+                              <span  class="price">₹61.21</span>
+                            </div>                            
+                          </div>   
+                        </div>
+                      </div>
+                      <div class="product-miniature js-product-miniature">
+                        <div class="product-container">
+                          <div class="image">                  
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/6.jpg" alt="Pellentesque et pharetra">
+                            </a>    
+                          </div>
+                          <div class="caption">
+                            <div class="product-title"><a href="productpage_leftcolumn.html">Vis feugiat delenit</a></div>
+                            <div class="product-price-and-shipping"> 
+                              <span class="sr-only">Regular price</span>
+                              <span class="regular-price">₹23.00</span>
+                              <span class="discount-percentage discount-product">-5%</span>
+                              <span class="sr-only">Price</span>
+                              <span  class="price">₹21.85</span>
+                            </div>                            
+                          </div>   
+                        </div>
+                      </div>
+                      <div class="product-miniature js-product-miniature">
+                        <div class="product-container">
+                          <div class="image">                  
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/7.jpg" alt="Pellentesque et pharetra">
+                            </a>    
+                          </div>
+                          <div class="caption">
+                            <div class="product-title"><a href="productpage_leftcolumn.html">Omnis dicam mentitum</a></div>
+                            <div class="product-price-and-shipping">
+                              <span class="sr-only">Price</span>
+                              <span class="price">₹25.99</span>
+                            </div>                            
+                          </div>   
+                        </div>
+                      </div>
+                      <div class="product-miniature js-product-miniature">
+                        <div class="product-container">
+                          <div class="image">                  
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/8.jpg" alt="Pellentesque et pharetra">
+                            </a>    
+                          </div>
+                          <div class="caption">
+                            <div class="product-title"><a href="productpage_leftcolumn.html">Vidit dolore eu qui</a></div>
+                            <div class="product-price-and-shipping">
+                              <span class="sr-only">Price</span>
+                              <span  class="price">₹30.50</span>
+                            </div>                            
+                          </div>   
+                        </div>
+                      </div>
+                    </div>
+                    <a class="all-product-link h4" href="productpage_leftcolumn.html">All best sellers <i class="material-icons">&#xE315;</i></a>  
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div id="_mobile_left_column"></div>
+      <div id="_mobile_right_column"></div>
+      <div class="clearfix"></div>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer-before">
+          <div class="container">
+            <div class="row">
+              <!-- newsletter  -->
+              <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12">
+                <div class="block_newsletter">
+                  <div id="newsletter-container" class="box-content"> 
+                    <div class="newsletter_content">
+                      <div class="email-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">          
+                          <symbol id="mail" viewBox="0 0 500 500"><title>mail</title>
+                            <path d="m494.2,488c0,0 0-225.8 0-301 0-3.1-3.9-7-7.7-9.9l-78.7-57.1v-63.1c0-6.2-5.2-10.4-10.4-10.4h-89.7l-45.7-33.3c-3.1-2.1-8.3-2.1-11.5,0l-45.7,33.3h-89.7c-6.2,0-10.4,5.2-10.4,10.4v62.4l-79.7,57.9c-4.7,2.9-7.7,6.7-7.7,9.9 0,75.7 0,303 0,303 0,5.9 4.7,10 9.6,10.4 0.3,0 0.5,0 0.8,0h456c6.7-0.1 10.5-5.3 10.5-12.5zm-19.8-282.3v263.6l-172.1-137.8 172.1-125.8zm-7.7-18.3l-58.9,42.9v-86.2l58.9,43.3zm-210.9-154.5l18.3,13.5h-36.7l18.4-13.5zm131.2,34.4v178.2l-131.2,95.6-131.2-95.6v-178.2h262.4zm-349.8,138.4l172.1,125.8-172.1,138.6v-264.4zm67.6,25.4l-60.4-44 60.4-43.9v87.9zm-48.9,249.5l170.1-136.9 23.5,17.2c4.5,3.4 7.9,3.4 12.5,0l23.5-17.2 171.1,136.9h-400.7z"></path><rect width="140.5" x="186.1" y="118.3" height="19.8"></rect><rect width="140.5" x="186.1" y="181.8" height="19.8"></rect><rect width="140.5" x="186.1" y="245.3" height="19.8"></rect>
+                           </symbol> 
+                        </svg>
+                        <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#mail" x="0%" y="0%"></use></svg>
+                      </div>
+                      <div class="newsletter-text">
+                          <h2 class="heading">Join Our Newsletter</h2>
+                        <div class="sub-heading">Enter your email address and recived news.</div>
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12">
+                <div class="newsletter_form">
+                  <form action="#" method="post">                   
+                    <input name="email" value="" placeholder="Enter Your Email" type="text" required>
+                    <span class="input-group__btn">
+                      <button class="button btn-submit" type="submit">
+                       <span class="newsletter__submit-text--large hidden-xs-down">SUBSCRIBE</span>
+                       <span class="newsletter__submit-text--large hidden-sm-up">GO</span>
+                      </button>
+                    </span>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-container">
+          <div class="container">
+            <div class="row">          
+              
+
+              <!-- store-info-block  -->
+              <div class="ishistoreinfo col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                <div class="ishistoreinfo-inner">
+                  <div class="store-img">
+                      <a href="{% url 'core:about' %}">
+                        <img class="feature-row__image lazy footer-logo-class" src="assets/images/footer-logo.png" alt="footer-logo">
+                      </a>
+                  </div>
+                  <div class="store-desc">
+                    <p>
+                     Radon is the leading mobile accessories manufacturer in Kerala delivering exceptional products to customers. Get your best accessories from Radon.
+                    </p>
+                  </div>
+                  <div class="block-container">
+                    <ul class="social-inner">
+                      <li class="facebook">
+                        <a href="#" target="_blank">
+                          <i class="fa fa-facebook"></i><span class="socialicon-label">Facebook</span>
+                        </a>
+                      </li>
+                      <li class="twitter">
+                        <a href="#" target="_blank">
+                          <i class="fa fa-twitter"></i><span class="socialicon-label">Twitter</span>
+                        </a>
+                      </li>
+                      <li class="pinterest">
+                        <a href="#" target="_blank">
+                          <i class="fa fa-pinterest-p"></i><span class="socialicon-label">Pinterest</span>
+                        </a>
+                      </li>
+                      <li class="instagram">
+                        <a href="#" target="_blank">
+                          <i class="fa fa-instagram"></i><span class="socialicon-label">Instagram</span>
+                        </a>
+                      </li>
+                      <li class="youtube">
+                        <a href="#" target="_blank">
+                          <i class="fa fa-youtube"></i><span class="socialicon-label">YouTube</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>  
+
+              <div id="_mobile_contact" class="col-md-12 hidden-lg-up"></div>               
+              
+             
+
+              <!-- contactblock  -->
+              <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="_desktop_contact"> 
+                <div class="row">             
+                  <div class="block-contact col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div id="contact-info-container" class="footer-contact">
+                      <div class="block phone col-lg-12 col-md-4 col-sm-4 col-xs-12">
+                        <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <div class="content">
+                          <div class="title">Contact Us</div>
+                          <a href="{% url 'core:contact' %}">9856321455</a>
+                        </div>
+                      </div>
+                      <div class="block email col-lg-12 col-md-4 col-sm-4 col-xs-12">
+                        <span class="icon phone"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <div class="content">
+                          <div class="title">Email</div>
+                          <a href="{% url 'core:contact' %}">info@gmail.com</a>
+                        </div>
+                      </div>
+                      <div class="block address col-lg-12 col-md-4 col-sm-4 col-xs-12">
+                        <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <div class="content">
+                          <div class="title">Location</div>
+                          <p>4005 Silver business point</p>
+                          <p>India</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-after">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-xs-12">
+                <!-- copyrights -->
+                <p class="footer-aftertext">
+                    <a class="_blank" href="{% url 'core:about' %}" target="_blank">
+                      Copyright 2021 All Rights Reserved
+                    </a>
+                </p>
+              </div>
+              <div class="col-lg-6 col-xs-12">
+                <!-- payment block -->
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <a id="slidetop"></a>
+    </footer>
+  </main>
+</body>
+</html>

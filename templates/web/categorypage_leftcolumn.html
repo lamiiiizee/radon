@@ -1,0 +1,194 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title %}Products{% endblock %}
+
+{% block content %}
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-container">
+        <nav data-depth="2" class="breadcrumb container">
+          <h3 class="h1 category-title breadcrumb-title">PRODUCTS</h3>
+          <ul>
+            <li>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Category page -->
+      <div id="wrapper">
+        <div class="container">
+          <div class="row">        
+            <!-- Left-column -->    
+            
+            <div id="content-wrapper" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <section id="main">
+                <input id="ishiCartURL" name="ishicarturl" type="hidden">
+                <input id="ishiStaticToken" name="ishistatictoken" value="3d2187fdc78a54510e1e1670c3ff42b0" type="hidden">
+                
+                <div class="category-info mt-2">
+                  <h3 class="h1">Our Awesome Products</h3>
+                  <div id="category-description"><p>Here are exclusive products from radon</p>
+                    <p>Check out Radon's innovative and trending charging accessories at the best prices.
+                    </p>
+                    <p> Let us help you own your best accessories.</p>
+                  </div>
+                </div>
+                <div id="products" class="category-product-info">
+                  <div id="product-list-top">
+                    <div id="js-product-list-top" class="row products-selection">
+                      <div class="col-lg-1 col-sm-6 total-products">
+                        <span class="layout-options">
+                          <span id="grid-view" class="checked"></span>
+                          <span id="list-view"></span>
+                        </span>
+                      </div>
+                      <div class="col-lg-6">
+                        
+                        <div class="row sort-by-row">
+                          <span class="col-sm-3 col-xs-12 col-md-3 hidden-lg-down sort-by">Filter by:</span>
+                          <div class="col-sm-9 col-xs-12 col-md-9 products-sort-order dropdown">
+                            <a href="javascript:void(0)" class="select-title" rel="nofollow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="FilterCat">All</a>
+                            <div class="dropdown-menu">
+                              <a rel="nofollow" class="select-list current js-search-link" onclick="filterProduct(0)" id="0">All</a>
+                              {% for categorie in categories %}
+                              <a rel="nofollow" class="select-list js-search-link" id="{{categorie.id}}" onclick="filterProduct({{categorie.id}})">{{categorie.name}}</a>
+                              {% endfor %}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden-sm-down">
+                    <section id="js-active-search-filters" class="hide"><h3 class="h6 hidden-xs-up">Active filters</h3></section>
+                  </div>
+                  <div id="js-product-list">
+                    <div class="products row" id="dynamicProducts">
+                      {% for product in products %}
+                      <article class="product-miniature phone-product js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 {{product.category.id}}">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="{% url 'core:product' product.id %}" class="thumbnail product-thumbnail">
+                              <img src="{{product.image.crop.370x370}}" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="{{product.image.crop.370x370}}">
+                            </a>
+                            <div class="product-comments">  
+                           
+                            </div>
+                         
+                            <div class="product-flags">
+                              
+                            </div>
+                           
+                            <div class="btn-cart">
+                              <a class="button buy-btn" href="{% url 'core:product' product.id %}">
+                                <span class="button-cart">
+                                  <img src="{% static 'web/svgs/add-to-cart.svg' %}" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">Purchase</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="caption"> 
+                            <h3 class='product-title'><a href="{% url 'core:product' product.id %}">{{product.name}}</a></h3>
+                            <p class="price">
+                              {% if product.cross_price %}<span class="regular price-old">₹ &nbsp;{{product.cross_price}}</span> {% endif %}
+
+                              {% if product.last_price %}<span class="price-sale">₹ &nbsp;{{product.last_price}}</span>{% endif %}
+
+                            </p>                          
+                            <p class="description">
+                              {% if product.description %} {{product.description}}{% endif %}</p> 
+                          </div>  
+                        </div>
+                      </article>
+                      {% endfor %}
+                     
+                    </div>
+                   
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mb-2">
+        <div id="_mobile_left_column"></div>
+        <div id="_mobile_right_column"></div>
+        <div class="clearfix"></div>
+      </div>
+    {% endblock %}
+    {% block javascript %}
+    <script>
+  $(document).ready(function(){
+    $('#dynamicProducts').children().show();
+    var currentLayout = $.totalStorage('productLayout');
+    if(currentLayout && currentLayout == 'listView') {
+        $('#grid-view').removeClass('checked');
+        setProductLayout('listView');
+    } else {
+        setProductLayout('gridView');
+    }
+
+    $(document).on('click', '#list-view', function(e){
+        if($(this).hasClass('checked'))
+            return;
+        $('#js-product-list').fadeOut(500,function() {
+        setProductLayout('listView');
+        }); 
+        $('#js-product-list').fadeIn(500);
+    });
+
+    $(document).on('click', '#grid-view', function(e){
+        if($(this).hasClass('checked'))
+            return;
+        $('#js-product-list').fadeOut(500,function() {
+        setProductLayout('gridView');
+        });
+        $('#js-product-list').fadeIn(500);
+    });
+    function setProductLayout(layout) {
+      if(layout == 'listView') {
+          $('#list-view').addClass('checked');
+          $('#grid-view').removeClass('checked');
+          $('#js-product-list .products').removeClass('grid');    
+          $('#js-product-list .products').addClass('list');
+          $('#js-product-list .products article').each(function() {
+              $(this).removeClass('col-sm-6 col-md-6 col-lg-6 col-xl-4');
+              $(this).find('.image').addClass('col-xs-12 col-sm-12 col-md-4 col-lg-4');
+              $(this).find('.caption').addClass('col-xs-12 col-sm-12 col-md-8 col-lg-8')
+              .append('');
+          });
+          $.totalStorage('productLayout','listView');
+      } else {
+          $('#grid-view').addClass('checked');
+          $('#list-view').removeClass('checked');
+          $('#js-product-list .products').removeClass('list');
+          $('#js-product-list .products').addClass('grid');
+          $('#js-product-list .products article').each(function() {
+              $(this).addClass('col-sm-6 col-md-6 col-lg-6 col-xl-4');
+              $(this).find('.image').removeClass('col-xs-12 col-sm-6 col-md-4 col-lg-4');
+              $(this).find('.caption').removeClass('col-xs-12 col-sm-6 col-md-8 col-lg-8')
+              .find('.button-group').remove();
+          });
+          $.totalStorage('productLayout','gridView');
+      }
+    }
+  });
+  function filterProduct(id){
+    if(id==0){
+      $('#dynamicProducts').children().fadeIn()
+      $('#FilterCat').html($('#'+id).html())
+    }
+    else{
+    $('#dynamicProducts').children().fadeOut();
+    $('.'+id).fadeIn()
+    $('#FilterCat').html($('#'+id).html())
+    }
+
+  }
+  
+</script>
+{% endblock %}
+

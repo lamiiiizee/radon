@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html dir="ltr" lang="en-US">
+
+<head>
+  <!-- Document Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--IE Compatibility Meta-->
+  <meta name="author" content="zytheme" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Mobile Phone Accessories ">
+  <link rel="icon" href="{% static 'web/images/favicon.png' %}" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="{% static 'web/css/material-icons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'web/css/tether.min.css' %}">
+  <script src="{% static 'web/js/tether.min.js' %}"></script>
+
+  <!-- Stylesheets -->
+  <link href="{% static 'web/css/bootstrap.css' %}" rel="stylesheet">
+  <link href="{% static 'web/css/responsive.css' %}" rel="stylesheet">
+  <link href="{% static 'web/css/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'web/css/theme.css' %}" rel="stylesheet">
+ <link href="{% static 'web/css/responsive.css' %}" rel="stylesheet">
+
+  <!-- JavaScripts -->   
+  <script src="{% static 'web/js/jquery.js' %}"></script>
+  <script src="{% static 'web/js/bootstrap.js' %}"></script>
+  <script src="{% static 'web/js/owl.carousel.js' %}"></script>
+  <script src="{% static 'web/js/animate.js' %}"></script>
+  <script src="{% static 'web/js/totalstorage.js' %}"></script>
+  <script src="{% static 'web/js/counter.js' %}"></script>
+  <script src="{% static 'web/js/parallax.js' %}"></script>
+  <script src="{% static 'web/js/instafeed.js' %}"></script>
+  <script src="{% static 'web/js/ishi.initialize.js' %}"></script>
+  <script src="{% static 'web/js/support.js' %}"></script>
+
+  <!-- Document Title -->
+  <title>{% block title %}Default Title{% endblock %}</title>
+</head>
+
+<body id="index">
+  <main>
+    <div id="menu_wrapper" class=""></div>
+    <!-- loader -->
+    <div id="spin-wrapper"></div>
+    <div id="siteloader">
+      <div class="loader"></div>
+    </div>
+    <!-- header -->
+    {% include 'web/partials/header.html' %}
+    <!-- mobile media -->
+    <div id="mobile_top_menu_wrapper" class="hidden-lg-up" style="display:none;">
+      <div id="top_menu_closer">
+        <i class="material-icons"></i>
+      </div>
+      <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+     <!-- footer -->
+     {% include 'web/partials/footer.html' %}
+
+     <a href="tel:+919656248731" class="call d-lg-none">
+      <img src="{% static 'web/images/icons/call.png' %}" style="max-width:100%" alt="Call">
+  </a>
+
+  <a href="https://wa.me/919656248731" class="whatsapp" target="blank">
+      <img src="{% static 'web/images/icons/whatsapp.png' %}" style="max-width:100%" alt="whatsapp">
+  </a>
+</main>
+{% block javascript %}{% endblock %}
+</body>
+</html>

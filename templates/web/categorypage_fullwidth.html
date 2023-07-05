@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <!-- Document Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--IE Compatibility Meta-->
+  <meta name="author" content="zytheme" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Mobile Phone Accessories ">
+  <link rel="icon" href="assets/images/favicon.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="assets/css/material-icons.min.css">
+  <link rel="stylesheet" href="assets/css/tether.min.css">
+  <script src="assets/js/tether.min.js"></script>
+
+  <!-- Stylesheets -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/css/theme.css" rel="stylesheet">
+ <link href="assets/css/responsive.css" rel="stylesheet">
+
+  <!-- JavaScripts -->   
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/owl.carousel.js"></script>
+  <script src="assets/js/animate.js"></script>
+  <script src="assets/js/totalstorage.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/parallax.js"></script>
+  <script src="assets/js/instafeed.js"></script>
+  <script src="assets/js/ishi.initialize.js"></script>
+  <script src="assets/js/support.js"></script>
+
+  <!-- Document Title -->
+  <title>Radon</title>
+</head>
+
+  <body id="left_column_categorypage">
+    <main>
+      <div id="menu_wrapper" class=""></div>
+    <!-- loader -->
+    <div id="spin-wrapper"></div>
+    <div id="siteloader">
+      <div class="loader"></div>
+    </div>
+    <!-- header -->
+    <header id="header" class="home">
+      <div class="nav-header">
+
+
+        <div class="header-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          <div class="ishiemailblock">
+            <div class="email-title">
+              Email :
+            </div>
+            <a href="{% url 'core:contact' %}" class="email-num">info@gmail.com</a>
+          </div>
+          <!-- <div class="announcement-bar hidden-sm-down">
+            <div class="announcement-title">
+                Today's Deal:
+            </div>
+            <div class="announcement-text">
+              Sale Off 50%
+            </div>
+          </div> -->
+        </div>
+
+        <!-- Ecommerce Area  -->
+        <!-- <div class="desktop-user-info col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="userinfo-inner">
+            <ul class="userinfo">
+              <li class="checkout">
+                <a  href="checkoutpage.html">Checkout</a>
+              </li>
+              <li class="wishlist">
+                <a href="mywishlistpage.html">Wishlist</a>
+              </li>
+              <li class="create_account">
+                <a href="{% url 'core:contact' %}" id="customer_register_link">Contact</a>
+              </li>    
+            </ul>
+          </div> 
+        </div> -->
+        <!-- Ecommerce Area  -->
+
+
+      </div>
+      <div class="header-top">
+        <!-- desktop_logo -->
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+          <div id="desktop_logo">
+            <a href="{% url 'core:index' %}">
+              <img class="logo img-responsive" src="assets/images/logo.png" alt="Demo Shop">
+            </a>
+          </div>
+        </div>              
+        
+        <div class="megamenu col-lg-7">
+          <!-- mega menu -->
+          <div id="_desktop_top_menu" class="menu js-top-menu hidden-sm-down">
+            <ul class="top-menu" id="top-menu" data-depth="0">  
+              <li class="cms-page" id="category-12">
+                <a class="dropdown-item" href="{% url 'core:index' %}" data-depth="0">
+                  Home
+                </a>
+              </li>
+             
+              <li class="cms-page" id="cms-page-4">
+                <a class="dropdown-item" href="{% url 'core:about' %}" data-depth="0">
+                  About
+                </a>
+              </li>
+              <li class="category" id="category-3">
+                <a class="dropdown-item" href="{% url 'core:products' %}" data-depth="0">Products</a>
+              </li>
+              <li class="category" id="category-1111">
+                <a class="dropdown-item" href="{% url 'core:gallery' %}" data-depth="0">Gallery</a>
+              </li>
+              <li class="cms-page" id="cms-page-1">
+                <a class="dropdown-item" href="{% url 'core:updates' %}" data-depth="0">
+                  Updates
+                </a>
+              </li>
+              <li class="cms-page" id="cms-page-1">
+                <a class="dropdown-item" href="{% url 'core:contact' %}" data-depth="0">
+                  Contact
+                </a>
+              </li>
+              
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+        <div class="header-right col-md-2 col-sm-6 col-xs-6">
+          <!-- shopping cart -->
+          <div id="_desktop_cart">
+                  <div class="blockcart cart-preview inactive">
+                    <div class="header">
+                      <!-- <span class="cart-link">
+                        <span class="cart-img">
+                          <span class="hidden-md-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">          
+                              <symbol id="shopping-cart" viewBox="0 0 700 700"><title>shopping-cart</title>
+                                    <path d="m150.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0"></path>
+                                      <path d="m446.855469 94.035156h-353.101563l-7.199218-40.300781c-4.4375-24.808594-23.882813-44.214844-48.699219-48.601563l-26.101563-4.597656c-5.441406-.96875-10.632812 2.660156-11.601562 8.097656-.964844 5.441407 2.660156 10.632813 8.101562 11.601563l26.199219 4.597656c16.53125 2.929688 29.472656 15.871094 32.402344 32.402344l35.398437 199.699219c4.179688 23.894531 24.941406 41.324218 49.199219 41.300781h210c22.0625.066406 41.546875-14.375 47.902344-35.5l47-155.800781c.871093-3.039063.320312-6.3125-1.5-8.898438-1.902344-2.503906-4.859375-3.980468-8-4zm-56.601563 162.796875c-3.773437 12.6875-15.464844 21.367188-28.699218 21.300781h-210c-14.566407.039063-27.035157-10.441406-29.5-24.800781l-24.699219-139.398437h336.097656zm0 0"></path>
+                                      <path d="m360.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0"></path>
+                              </symbol> 
+                            </svg>
+                            <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#shopping-cart" x="15%" y="17%"></use></svg>
+                          </span>
+                          <span class="hidden-lg-up">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">          
+                              <symbol id="cart-responsive" viewBox="0 0 510 510"><title>cart-responsive</title>
+                                <path d="M306.4,313.2l-24-223.6c-0.4-3.6-3.6-6.4-7.2-6.4h-44.4V69.6c0-38.4-31.2-69.6-69.6-69.6c-38.4,0-69.6,31.2-69.6,69.6
+                                 v13.6H46c-3.6,0-6.8,2.8-7.2,6.4l-24,223.6c-0.4,2,0.4,4,1.6,5.6c1.2,1.6,3.2,2.4,5.2,2.4h278c2,0,4-0.8,5.2-2.4
+                                 C306,317.2,306.8,315.2,306.4,313.2z M223.6,123.6c3.6,0,6.4,2.8,6.4,6.4c0,3.6-2.8,6.4-6.4,6.4c-3.6,0-6.4-2.8-6.4-6.4
+                                 C217.2,126.4,220,123.6,223.6,123.6z M106,69.6c0-30.4,24.8-55.2,55.2-55.2c30.4,0,55.2,24.8,55.2,55.2v13.6H106V69.6z
+                                 M98.8,123.6c3.6,0,6.4,2.8,6.4,6.4c0,3.6-2.8,6.4-6.4,6.4c-3.6,0-6.4-2.8-6.4-6.4C92.4,126.4,95.2,123.6,98.8,123.6z M30,306.4
+                                 L52.4,97.2h39.2v13.2c-8,2.8-13.6,10.4-13.6,19.2c0,11.2,9.2,20.4,20.4,20.4c11.2,0,20.4-9.2,20.4-20.4c0-8.8-5.6-16.4-13.6-19.2
+                                 V97.2h110.4v13.2c-8,2.8-13.6,10.4-13.6,19.2c0,11.2,9.2,20.4,20.4,20.4c11.2,0,20.4-9.2,20.4-20.4c0-8.8-5.6-16.4-13.6-19.2V97.2
+                                 H270l22.4,209.2H30z"></path>
+                              </symbol>
+                            </svg>
+                            <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#cart-responsive" x="13%" y="13%"></use></svg>
+                          </span>
+                          <span class="cart-products-count">3</span>
+                        </span>
+                      </span> -->
+                      <div class="cart-dropdown">
+                        <div class="product-container">
+                          <div class="product"> 
+                            <a class="product-image" href="productpage_fullwidth.html">
+                              <img src="assets/images/product/1.jpg" alt="Simul dolorem voluptaria">
+                            </a>
+                            <div class="product-detail">
+                              <div class="product-name">
+                                <span class="quantity-formated">
+                                  <span class="quantity">1</span>
+                                  &nbsp;x&nbsp;
+                                </span>
+                                <a class="cart_block_product_name" href="productpage_fullwidth.html">Simul dolorem voluptaria</a>
+                              </div>
+                              <div class="price">₹16.51</div>
+                              <ul class="product-atributes">
+                                <li class="atributes">
+                                  <span class="label">Size:</span>
+                                  <span class="value">S</span>
+                                </li>
+                                <li class="atributes">
+                                  <span class="label">Color:</span>
+                                  <span class="value">Orange</span>
+                                </li>
+                              </ul>
+                            </div> 
+                            <div class="remove-product">
+                              <a class="remove-from-cart" rel="nofollow" href="categorypage_fullwidth.html">
+                                <i class="material-icons">delete</i>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="product"> 
+                            <a class="product-image" href="productpage_fullwidth.html">
+                              <img src="assets/images/product/3.jpg" alt="Omnis dicam mentitum">
+                            </a>
+                            <div class="product-detail">
+                              <div class="product-name">
+                                <span class="quantity-formated">
+                                  <span class="quantity">1</span>
+                                  &nbsp;x&nbsp;
+                                </span>
+                                <a class="cart_block_product_name" href="productpage_fullwidth.html">Omnis dicam mentitum</a>
+                              </div>
+                              <div class="price">₹25.99</div>
+                              <ul class="product-atributes">
+                                <li class="atributes">
+                                  <span class="label">Size:</span>
+                                  <span class="value">S</span>
+                                </li>
+                                <li class="atributes">
+                                  <span class="label">Color:</span>
+                                  <span class="value">Orange</span>
+                                </li>
+                              </ul>
+                            </div> 
+                            <div class="remove-product">
+                              <a class="remove-from-cart" rel="nofollow" href="categorypage_fullwidth.html">
+                                <i class="material-icons">delete</i>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="product"> 
+                            <a class="product-image" href="productpage_fullwidth.html">
+                              <img src="assets/images/product/5.jpg" alt="Eled doming deserunt">
+                            </a>
+                            <div class="product-detail">
+                              <div class="product-name">
+                                <span class="quantity-formated">
+                                  <span class="quantity">1</span>
+                                  &nbsp;x&nbsp;
+                                </span>
+                                <a class="cart_block_product_name" href="productpage_fullwidth.html">Eled doming deserunt</a>
+                              </div>
+                              <div class="price">₹28.98</div>
+                              <ul class="product-atributes">
+                                <li class="atributes">
+                                  <span class="label">Size:</span>
+                                  <span class="value">S</span>
+                                </li>
+                                <li class="atributes">
+                                  <span class="label">Color:</span>
+                                  <span class="value">Yellow</span>
+                                </li>
+                              </ul>
+                            </div> 
+                            <div class="remove-product">
+                              <a class="remove-from-cart" rel="nofollow" href="categorypage_fullwidth.html">
+                                <i class="material-icons">delete</i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="billing-info">
+                            <div class="billing subtotal-info">
+                              <span class="label">Subtotal</span>
+                              <span class="value">₹71.48</span>
+                            </div>
+                            <div class="billing shipping-info">
+                              <span class="label">Shipping</span>
+                              <span class="value">₹7.00</span>
+                            </div>
+                            <div class="billing tax-info">
+                              <span class="label">Taxes</span>
+                              <span class="value">₹0.00</span>
+                            </div>
+                            <div class="billing total-info">
+                              <span class="label">Total</span>
+                              <span class="value">₹78.48</span>
+                            </div> 
+                        </div>
+                        <div class="cart-btn col-xs-12">
+                          <a href="checkoutpage.html" class="btn btn-primary checkout">Checkout</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        <!-- account -->  
+          <div id="_desktop_account">
+            <div class="account">
+              <!-- <span class="account-logo">
+                <span class="userinfo-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">          
+                    <symbol id="user-desktop" viewBox="0 0 480 480"><title>user-desktop</title>
+                      <path d="M187.497,152.427H73.974c-38.111,0-69.117,31.006-69.117,69.117v39.928h251.758v-39.928
+                         C256.614,183.433,225.608,152.427,187.497,152.427z M241.614,246.473H19.856v-24.928c0-29.84,24.277-54.117,54.117-54.117h113.523
+                         c29.84,0,54.117,24.277,54.117,54.117L241.614,246.473L241.614,246.473z"></path>
+                      <path d="M130.735,145.326c40.066,0,72.663-32.597,72.663-72.663S170.802,0,130.735,0S58.072,32.596,58.072,72.663
+                         S90.669,145.326,130.735,145.326z M130.735,15c31.796,0,57.663,25.867,57.663,57.663s-25.867,57.663-57.663,57.663
+                         s-57.663-25.868-57.663-57.663S98.939,15,130.735,15z"></path>
+                    </symbol> 
+                  </svg>
+                  <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#user-desktop" x="20%" y="20%"></use></svg>
+                </span>
+              </span> -->
+              <ul class="dropdown-menu account-dropdown">
+                <li class="user-signin">
+                  <a href="user-register.html" title="Log in to your customer account" rel="nofollow">
+                    <span>Sign in</span>
+                  </a>
+                </li>                    
+            </ul>
+            </div>
+          </div>
+        <!--  Block search  -->
+          <div id="_desktop_seach_widget">
+            <div id="search_widget" class="search-widget">
+              <span class="search-logo">
+                <span class="search-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">   
+                    <symbol id="magnifying-desktop" viewBox="0 0 1200 1200"><title>magnifying-desktop</title>
+                      <path d="M606.209,578.714L448.198,423.228C489.576,378.272,515,318.817,515,253.393C514.98,113.439,399.704,0,257.493,0
+                           C115.282,0,0.006,113.439,0.006,253.393s115.276,253.393,257.487,253.393c61.445,0,117.801-21.253,162.068-56.586
+                           l158.624,156.099c7.729,7.614,20.277,7.614,28.006,0C613.938,598.686,613.938,586.328,606.209,578.714z M257.493,467.8
+                           c-120.326,0-217.869-95.993-217.869-214.407S137.167,38.986,257.493,38.986c120.327,0,217.869,95.993,217.869,214.407
+                           S377.82,467.8,257.493,467.8z"></path>
+                     </symbol>
+                  </svg>
+                  <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#magnifying-desktop" x="20%" y="22%"></use></svg>
+              </span>
+              </span>
+              <form method="get" action="https://demo.ishithemes.com/html/fabulous/Layout004/categorypage_fullwidth.html">
+                <input name="s" value="" placeholder="Search" class="ui-autocomplete-input" autocomplete="off" type="text">
+                <button type="submit">
+                  <i class="material-icons search"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="nav-full-width">
+        <div class="container">
+          <div class="row">
+          <!-- mobile media -->
+            <div id="menu-icon" class="menu-icon hidden-lg-up">
+              <div class="menu-block">
+                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">   
+                  <symbol id="setup" viewBox="0 0 750 750"><title>setup</title><g> <rect y="46.06" width="344.339" height="29.52"></rect> </g><g> <rect y="156.506" width="344.339" height="29.52"></rect> </g><g> <rect y="268.748" width="344.339" height="29.531"></rect> </g></symbol>
+                </svg>
+                <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#setup" x="25%" y="27%"></use></svg>
+              </div>
+            </div>
+            <div id="_mobile_cart"></div>
+            <div id="_mobile_account"></div>
+            <div id="_mobile_seach_widget"></div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- mobile media -->
+    <div id="mobile_top_menu_wrapper" class="hidden-lg-up" style="display:none;">
+      <div id="top_menu_closer">
+        <i class="material-icons"></i>
+      </div>
+      <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
+    </div>
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-container">
+        <nav data-depth="2" class="breadcrumb container">
+          <h1 class="h1 category-title breadcrumb-title">Category</h1>
+          <ul>
+            <li>
+              <a href="#index.html">
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+                <span>Women</span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Category page -->
+      <div id="wrapper">
+        <div class="container">
+          <div class="row">   
+            <div id="content-wrapper" class="col-12">
+              <section id="main">
+                <input id="ishiCartURL" name="ishicarturl" value="#" type="hidden">
+                <input id="ishiStaticToken" name="ishistatictoken" value="3d2187fdc78a54510e1e1670c3ff42b0" type="hidden">
+                <div class="block-category card card-block">
+                  <div class="category-cover">
+                    <img src="assets/images/fullwidth-category_img.jpg" alt="category-img">
+                  </div>
+                </div>
+                <div class="category-info">
+                  <h3 class="h1">Women</h3>
+                  <div id="category-description"><p>You will find here all woman fashion collections.</p>
+                    <p>This category includes all the basics of your wardrobe and much more:</p>
+                    <p>shoes, accessories, printed t-shirts, feminine dresses, women's jeans!</p>
+                  </div>
+                </div>
+                <div id="products" class="category-product-info">
+                  <div id="product-list-top">
+                    <div id="js-product-list-top" class="row products-selection">
+                      <div class="col-lg-6 total-products">
+                        <span class="layout-options">
+                          <span id="grid-view" class="checked"></span>
+                          <span id="list-view"></span>
+                        </span>
+                        <p>There are 20 products.</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="row sort-by-row">
+                          <span class="col-sm-3 col-xs-12 col-md-3 hidden-lg-down sort-by">Sort by:</span>
+                          <div class="col-sm-9 col-xs-12 col-md-9 products-sort-order dropdown">
+                            <a href="javascript:void(0)" class="select-title" rel="nofollow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Relevance<i class="material-icons pull-xs-right">&#xE5C5;</i></a>
+                            <div class="dropdown-menu">
+                              <a rel="nofollow" href="{% url 'core:products' %}" class="select-list current js-search-link">Relevance</a>
+                              <a rel="nofollow" href="{% url 'core:products' %}" class="select-list js-search-link">Name, A to Z</a>
+                              <a rel="nofollow" href="{% url 'core:products' %}" class="select-list js-search-link">Name, Z to A</a>
+                              <a rel="nofollow" href="{% url 'core:products' %}" class="select-list js-search-link">Price, low to high</a>
+                              <a rel="nofollow" href="{% url 'core:products' %}" class="select-list js-search-link">Price, high to low</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 hidden-md-up showing">Showing 1-20 of 20 item(s)</div>
+                    </div>
+                  </div>
+                  <div class="hidden-sm-down">
+                    <section id="js-active-search-filters" class="hide"><h3 class="h6 hidden-xs-up">Active filters</h3></section>
+                  </div>
+                  <div id="js-product-list">
+                    <div class="products row">
+                      <article class="product-miniature js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/1.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/2.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <span class="outstock-overlay">SOLD OUT</span>
+                            <div class="product-flags">
+                              <div class="sale">Sale</div>
+                            </div>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="caption"> 
+                            <h3 class='product-title'><a href="productpage_leftcolumn.html">Aroma Mocha</a></h3>
+                            <p class="price">
+                              <span class="regular price-old">₹55.00</span> 
+                              <span class="price-discount">9%</span> 
+                              <span class="price-sale">₹50.00 </span>
+                            </p>                          
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p> 
+                          </div>  
+                        </div>
+                      </article>
+                      <article class="product-miniature js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/3.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/4.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div> 
+                          </div>
+                          <div class="caption"> 
+                            <h3 class='product-title'><a href="productpage_leftcolumn.html">autem euaiure</a></h3>
+                            <p class="price">
+                              <span class="price-sale">₹45.00 </span>
+                            </p>                          
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p>
+                          </div>  
+                        </div>
+                      </article>
+                      <article class="product-miniature js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/14.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/15.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <span class="outstock-overlay">SOLD OUT</span>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="caption"> 
+                            <h3 class='product-title'><a href="productpage_leftcolumn.html">Authletic Stud</a></h3>
+                            <p class="price">
+                              <span class="price-sale">₹80.00 </span>
+                            </p>                    
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p> 
+                          </div>  
+                        </div>
+                      </article>
+                      <article class="product-miniature js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/5.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/6.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <div class="product-flags">
+                              <div class="sale">Sale</div>
+                            </div>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="caption"> 
+                            <h3 class='product-title'><a href="productpage_leftcolumn.html">Black Tour Bag</a></h3>
+                            <p class="price">
+                              <span class="regular price-old">₹42.00</span> 
+                              <span class="price-discount">4%</span> 
+                              <span class="price-sale">₹40.00 </span>
+                            </p>                  
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p>  
+                          </div>    
+                        </div>
+                      </article>
+                      <article class="product-miniature js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/9.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/10.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <span class="outstock-overlay">SOLD OUT</span>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="caption"> 
+                            <h3 class='product-title'><a href="productpage_leftcolumn.html">Authletic Stud</a></h3>
+                            <p class="price"> 
+                              <span class="price-sale">₹80.00 </span>
+                            </p>
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p> 
+                          </div>  
+                        </div>
+                      </article>
+                      <article class="product-miniature js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/11.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/12.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div> 
+                          </div>
+                          <div class="caption"> 
+                            <h3 class='product-title'><a href="productpage_leftcolumn.html">Skillofun Junior</a></h3>
+                            <p class="price">
+                              <span class="price-sale">₹64.00 </span>
+                            </p>                         
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p> 
+                          </div>   
+                        </div>
+                      </article>
+                      <article class="product-miniature js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/16.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/17.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div> 
+                          </div>
+                          <div class="caption"> 
+                            <h3 class='product-title'><a href="productpage_leftcolumn.html">Crinkle Leaf</a></h3>
+                            <p class="price">
+                              <span class="price-sale">₹60.00 </span>
+                            </p>
+                                              
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p>  
+                          </div>  
+                        </div>
+                      </article>
+                      <article class="product-miniature js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/18.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/19.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="caption"> 
+                            <h3 class='product-title'><a href="productpage_leftcolumn.html">corporis suscipit</a></h3>
+                            <p class="price">
+                              <span class="price-sale">₹50.00 </span>
+                            </p>             
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p>  
+                          </div>   
+                        </div>
+                      </article>
+                      <article class="product-miniature js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/20.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/1.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <div class="product-flags">
+                              <div class="sale">Sale</div>
+                            </div>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="caption"> 
+                            <h3 class='product-title'><a href="productpage_leftcolumn.html">Shake Spin Lion</a></h3>
+                            <p class="price">
+                              <span class="regular price-old">₹50.00</span> 
+                              <span class="price-discount">9%</span> 
+                              <span class="price-sale">₹55.00 </span>
+                            </p>                         
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p>
+                          </div>    
+                        </div>
+                      </article>
+                      <article class="product-miniature js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/8.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/9.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <div class="product-flags">
+                              <div class="sale">Sale</div>
+                            </div>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="caption"> 
+                            <h3 class='product-title'><a href="productpage_leftcolumn.html">Sensory Sweet</a></h3>
+                            <p class="price">
+                              <span class="regular price-old">₹25.00</span> 
+                              <span class="price-discount">16%</span> 
+                              <span class="price-sale">₹30.00 </span>
+                            </p>                         
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p> 
+                          </div>  
+                        </div>
+                      </article>
+                      <article class="product-miniature js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/12.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/13.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="caption"> 
+                            <h3 class='product-title'><a href="productpage_leftcolumn.html">Link 'n Go  Pack</a></h3>
+                            <p class="price">
+                              <span class="regular price-old">₹15.00</span> 
+                              <span class="price-discount">25%</span> 
+                              <span class="price-sale">₹20.00 </span>
+                            </p>                          
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p> 
+                          </div>  
+                        </div>
+                      </article>
+                      <article class="product-miniature js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/4.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/5.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <span class="outstock-overlay">SOLD OUT</span>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="caption"> 
+                            <h3 class='product-title'><a href="productpage_leftcolumn.html">Scoop ’n Bath</a></h3>
+                            <p class="price">
+                              <span class="price-sale">₹15.00 </span>
+                            </p>                          
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p> 
+                          </div>    
+                        </div>
+                      </article>
+                      <article class="product-miniature js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/7.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/9.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="caption"> 
+                            <h3 class='product-title'><a href="productpage_leftcolumn.html">Comdaq Stroller</a></h3>
+                            <p class="price">
+                              <span class="price-sale">₹90.00 </span>
+                            </p>
+                                                 
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p> 
+                          </div>   
+                        </div>
+                      </article>
+                      <article class="product-miniature js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/10.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/20.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div> 
+                          </div>
+                          <div class="caption"> 
+                            <h3 class='product-title'><a href="productpage_leftcolumn.html">Brown cushion</a></h3>
+                            <p class="price">
+                              <span class="price-sale">₹60.00 </span>
+                            </p>                         
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p>  
+                          </div>  
+                        </div>
+                      </article>
+                      <article class="product-miniature js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-container product-thumb">
+                          <div class="image">
+                            <a href="productpage_leftcolumn.html" class="thumbnail product-thumbnail">
+                              <img src="assets/images/product/19.jpg" alt="product-img">
+                              <img class="product-img-extra change" alt="product-img" src="assets/images/product/2.jpg">
+                            </a>
+                            <div class="product-comments">  
+                              <div class="star_content">
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                                  <div class="star star_on"></div>
+                              </div>
+                            </div>
+                            <span class="outstock-overlay">SOLD OUT</span>
+                            <div class="button-group">  
+                              <div class="btn-quickview"> 
+                                <a class="quickbox" href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/quickview.svg" alt="quickview">
+                                  <span class="lblcart">Quick View</span>
+                                </a>
+                              </div>                  
+                              <div class="btn-wishlist">
+                                <a href="productpage_leftcolumn.html">
+                                  <img src="assets/svgs/wishlist-outline.svg" alt="wishlist-outline">
+                                </a>
+                              </div>
+                            </div> 
+                            <div class="btn-cart">
+                              <a class="button" href="productpage_leftcolumn.html">
+                                <span class="button-cart">
+                                  <img src="assets/svgs/add-to-cart.svg" alt="add-to-cart">
+                                </span>
+                                <i class="fa fa-shopping-cart"></i> 
+                                <span class="lblcart">SOLD OUT</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="caption">
+                            <h3 class='product-title'><a href="productpage_leftcolumn.html">Classic Fisher Gift</a></h3> 
+                            <p class="price">
+                              <span class="regular price-old">₹55.00</span> 
+                              <span class="price-discount">9%</span> 
+                              <span class="price-sale">₹50.00 </span>
+                            </p>                       
+                            <p class="description">
+                            The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..</p>  
+                          </div>  
+                        </div>
+                      </article>
+                    </div>
+                    <div class="pagination">
+                      <div class="col-xl-4 col-lg-5 col-md-5 col-xs-12 pagination-desc">Showing 1-15 of 19 item(s)</div>
+                      <div class="col-xl-8  col-lg-7 col-md-7 col-xs-12 pagination-right">
+                        <ul class="page-list clearfix">        
+                          <li>
+                            <a rel="prev" href="javascript:void(0)" class="previous">
+                              <i class="material-icons"></i><span class="pagination-lbl">Previous</span>
+                            </a>
+                          </li>                
+                          <li class="current">
+                            <a rel="nofollow" href="javascript:void(0)" class="disabled js-search-link">1</a>
+                          </li>                
+                          <li>
+                            <a rel="nofollow" href="javascript:void(0)" class="js-search-link">2</a>
+                          </li>                
+                          <li>
+                            <a rel="next" href="javascript:void(0)" class="next js-search-link">
+                              <span class="pagination-lbl">Next</span><i class="material-icons"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+    <footer id="footer">
+        <div class="footer-before">
+          <div class="container">
+            <div class="row">
+              <!-- newsletter  -->
+              <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12">
+                <div class="block_newsletter">
+                  <div id="newsletter-container" class="box-content"> 
+                    <div class="newsletter_content">
+                      <div class="email-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">          
+                          <symbol id="mail" viewBox="0 0 500 500"><title>mail</title>
+                            <path d="m494.2,488c0,0 0-225.8 0-301 0-3.1-3.9-7-7.7-9.9l-78.7-57.1v-63.1c0-6.2-5.2-10.4-10.4-10.4h-89.7l-45.7-33.3c-3.1-2.1-8.3-2.1-11.5,0l-45.7,33.3h-89.7c-6.2,0-10.4,5.2-10.4,10.4v62.4l-79.7,57.9c-4.7,2.9-7.7,6.7-7.7,9.9 0,75.7 0,303 0,303 0,5.9 4.7,10 9.6,10.4 0.3,0 0.5,0 0.8,0h456c6.7-0.1 10.5-5.3 10.5-12.5zm-19.8-282.3v263.6l-172.1-137.8 172.1-125.8zm-7.7-18.3l-58.9,42.9v-86.2l58.9,43.3zm-210.9-154.5l18.3,13.5h-36.7l18.4-13.5zm131.2,34.4v178.2l-131.2,95.6-131.2-95.6v-178.2h262.4zm-349.8,138.4l172.1,125.8-172.1,138.6v-264.4zm67.6,25.4l-60.4-44 60.4-43.9v87.9zm-48.9,249.5l170.1-136.9 23.5,17.2c4.5,3.4 7.9,3.4 12.5,0l23.5-17.2 171.1,136.9h-400.7z"></path><rect width="140.5" x="186.1" y="118.3" height="19.8"></rect><rect width="140.5" x="186.1" y="181.8" height="19.8"></rect><rect width="140.5" x="186.1" y="245.3" height="19.8"></rect>
+                           </symbol> 
+                        </svg>
+                        <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#mail" x="0%" y="0%"></use></svg>
+                      </div>
+                      <div class="newsletter-text">
+                          <h2 class="heading">Join Our Newsletter</h2>
+                        <div class="sub-heading">Enter your email address and recived news.</div>
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12">
+                <div class="newsletter_form">
+                  <form action="#" method="post">                   
+                    <input name="email" value="" placeholder="Enter Your Email" type="text" required>
+                    <span class="input-group__btn">
+                      <button class="button btn-submit" type="submit">
+                       <span class="newsletter__submit-text--large hidden-xs-down">SUBSCRIBE</span>
+                       <span class="newsletter__submit-text--large hidden-sm-up">GO</span>
+                      </button>
+                    </span>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-container">
+          <div class="container">
+            <div class="row">          
+              
+
+              <!-- store-info-block  -->
+              <div class="ishistoreinfo col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                <div class="ishistoreinfo-inner">
+                  <div class="store-img">
+                      <a href="{% url 'core:about' %}">
+                        <img class="feature-row__image lazy footer-logo-class" src="assets/images/footer-logo.png" alt="footer-logo">
+                      </a>
+                  </div>
+                  <div class="store-desc">
+                    <p>
+                     Radon is the leading mobile accessories manufacturer in Kerala delivering exceptional products to customers. Get your best accessories from Radon.
+                    </p>
+                  </div>
+                  <div class="block-container">
+                    <ul class="social-inner">
+                      <li class="facebook">
+                        <a href="#" target="_blank">
+                          <i class="fa fa-facebook"></i><span class="socialicon-label">Facebook</span>
+                        </a>
+                      </li>
+                      <li class="twitter">
+                        <a href="#" target="_blank">
+                          <i class="fa fa-twitter"></i><span class="socialicon-label">Twitter</span>
+                        </a>
+                      </li>
+                      <li class="pinterest">
+                        <a href="#" target="_blank">
+                          <i class="fa fa-pinterest-p"></i><span class="socialicon-label">Pinterest</span>
+                        </a>
+                      </li>
+                      <li class="instagram">
+                        <a href="#" target="_blank">
+                          <i class="fa fa-instagram"></i><span class="socialicon-label">Instagram</span>
+                        </a>
+                      </li>
+                      <li class="youtube">
+                        <a href="#" target="_blank">
+                          <i class="fa fa-youtube"></i><span class="socialicon-label">YouTube</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>  
+
+              <div id="_mobile_contact" class="col-md-12 hidden-lg-up"></div>               
+              
+             
+
+              <!-- contactblock  -->
+              <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="_desktop_contact"> 
+                <div class="row">             
+                  <div class="block-contact col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div id="contact-info-container" class="footer-contact">
+                      <div class="block phone col-lg-12 col-md-4 col-sm-4 col-xs-12">
+                        <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <div class="content">
+                          <div class="title">Contact Us</div>
+                          <a href="{% url 'core:contact' %}">9856321455</a>
+                        </div>
+                      </div>
+                      <div class="block email col-lg-12 col-md-4 col-sm-4 col-xs-12">
+                        <span class="icon phone"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <div class="content">
+                          <div class="title">Email</div>
+                          <a href="{% url 'core:contact' %}">info@gmail.com</a>
+                        </div>
+                      </div>
+                      <div class="block address col-lg-12 col-md-4 col-sm-4 col-xs-12">
+                        <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <div class="content">
+                          <div class="title">Location</div>
+                          <p>4005 Silver business point</p>
+                          <p>India</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-after">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-xs-12">
+                <!-- copyrights -->
+                <p class="footer-aftertext">
+                    <a class="_blank" href="{% url 'core:about' %}" target="_blank">
+                      Copyright 2021 All Rights Reserved
+                    </a>
+                </p>
+              </div>
+              <div class="col-lg-6 col-xs-12">
+                <!-- payment block -->
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <a id="slidetop"></a>
+    </footer>
+    </main>
+    <script>
+  $(document).ready(function(){
+    var currentLayout = $.totalStorage('productLayout');
+    if(currentLayout && currentLayout == 'listView') {
+        $('#grid-view').removeClass('checked');
+        setProductLayout('listView');
+    } else {
+        setProductLayout('gridView');
+    }
+
+    $(document).on('click', '#list-view', function(e){
+        if($(this).hasClass('checked'))
+            return;
+        $('#js-product-list').fadeOut(500,function() {
+        setProductLayout('listView');
+        }); 
+        $('#js-product-list').fadeIn(500);
+    });
+
+    $(document).on('click', '#grid-view', function(e){
+        if($(this).hasClass('checked'))
+            return;
+        $('#js-product-list').fadeOut(500,function() {
+        setProductLayout('gridView');
+        });
+        $('#js-product-list').fadeIn(500);
+    });
+    function setProductLayout(layout) {
+      if(layout == 'listView') {
+          $('#list-view').addClass('checked');
+          $('#grid-view').removeClass('checked');
+          $('#js-product-list .products').removeClass('grid');    
+          $('#js-product-list .products').addClass('list');
+          $('#js-product-list .products article').each(function() {
+              $(this).removeClass('col-sm-6 col-md-6 col-lg-4 col-xl-3');
+              $(this).find('.image').addClass('col-xs-12 col-sm-12 col-md-5 col-lg-4 col-xl-3');
+              $(this).find('.caption').addClass('col-xs-12 col-sm-12 col-md-7 col-lg-8 col-xl-9')
+              .append('<div class="button-group">'+ $(this).find('.image .button-group').html() + '</div>');
+          });
+          $.totalStorage('productLayout','listView');
+      } else {
+          $('#grid-view').addClass('checked');
+          $('#list-view').removeClass('checked');
+          $('#js-product-list .products').removeClass('list');
+          $('#js-product-list .products').addClass('grid');
+          $('#js-product-list .products article').each(function() {
+              $(this).addClass('col-sm-6 col-md-6 col-lg-4 col-xl-3');
+              $(this).find('.image').removeClass('col-xs-12 col-sm-6 col-md-5 col-lg-4 col-xl-3');
+              $(this).find('.caption').removeClass('col-xs-12 col-sm-6 col-md-7 col-lg-8 col-xl-9')
+              .find('.button-group').remove();
+          });
+          $.totalStorage('productLayout','gridView');
+      }
+    }
+  });
+</script>
+  </body>
+</html>

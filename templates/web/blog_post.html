@@ -1,0 +1,69 @@
+
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title %}Updates{% endblock %}
+{% block content %}
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-container mb-4">
+        <nav data-depth="2" class="breadcrumb container">
+          <h1 class="h1 category-title breadcrumb-title">Blog</h1>
+          <ul>
+            <li>
+              <a href="{% url 'core:index' %}">
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+                <span>Blog Post</span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Smart Blog -->
+      <section id="wrapper">
+        <div class="container">
+          <div class="row">          
+            <div id="content-wrapper" class="left-column col-xs-12 col-sm-12 col-md-12 col-lg-9"> 
+              <div id="content" class="block">
+                <div id="sdsblogArticle" class="blog-post">
+                    <div class="articleBody">
+                        <div id="lipsum" class="articleContent">
+                          <div class="single-blogpost-img">
+                            <a id="post_images" href="javascript:void(0)">
+                                <img src="{{ update.image.crop.870x588 }}" alt="Nostro expetenda">
+                            </a>
+                          </div>
+                            <div class="page-item-title">
+                                <h2>{{ update.heading }}</h2>
+                            </div>
+                            <ul class="post-info">
+                             
+                           </ul>
+                            <div class="sdsarticle-des">
+                              <p>
+                                {{update.short_description}}
+                              </p>
+                              <p class="h4">
+                                {% if update.short_heading %} {{update.short_heading}} {% endif %}
+                              </p>
+                              <div class="small-desc">
+                                <p>
+                                  {% if update.description %} {{update.description}} {% endif %}
+                                </p>
+                              </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+              </div>
+            </div> 
+             
+          </div>
+        </div>        
+      </section>
+      <div class="container">
+        <div id="_mobile_left_column"></div>
+        <div id="_mobile_right_column"></div>
+        <div class="clearfix"></div>
+      </div>
+      {% endblock %}

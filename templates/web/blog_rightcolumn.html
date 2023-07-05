@@ -1,0 +1,45 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<!-- Breadcrumb -->
+      <div class="breadcrumb-container mb-4">
+        <nav data-depth="2" class="breadcrumb container">
+          <h1 class="h1 category-title breadcrumb-title">GALLERY</h1>
+          <ul>
+            
+          </ul>
+        </nav>
+      </div>
+      <!-- Smart Blog -->
+      <section id="wrapper">
+        <div class="container-fluid col-lg-11 col-md-11 col-sm-12">
+          <div class="row">                      
+            <div id="content-wrapper" class="container-fluid"> 
+              <div id="smartblogcat" class="block lamiiz_gallery row">
+                
+                {% for gallary in gallaries %}
+                <div class="sdsarticleCat clearfix row col-sm-6-lamiiz col-sm-6 col-md-4 col-lg-3">
+                  <div class="articleContent col-12">
+                    <a href="#" title="Upon of seasons earth dominion">
+                      <img alt="Upon of seasons earth dominion" src="{{gallary.image.crop.588x588}}">
+                    </a>
+                  </div>
+                </div>
+                {% endfor %}
+                
+              </div>
+             
+            </div> 
+                      
+          </div>
+        </div>        
+      </section>
+      <div class="container">
+        <div id="_mobile_left_column"></div>
+        <div id="_mobile_right_column"></div>
+        <div class="clearfix"></div>
+      </div>
+      <!-- footer -->
+      {% endblock %}

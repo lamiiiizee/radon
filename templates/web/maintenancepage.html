@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <!-- Document Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--IE Compatibility Meta-->
+  <meta name="author" content="zytheme" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Mobile Phone Accessories ">
+  <link rel="icon" href="assets/images/favicon.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="assets/css/material-icons.min.css">
+  <link rel="stylesheet" href="assets/css/tether.min.css">
+  <script src="assets/js/tether.min.js"></script>
+
+  <!-- Stylesheets -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/css/theme.css" rel="stylesheet">
+ <link href="assets/css/responsive.css" rel="stylesheet">
+
+  <!-- JavaScripts -->   
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/owl.carousel.js"></script>
+  <script src="assets/js/animate.js"></script>
+  <script src="assets/js/totalstorage.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/parallax.js"></script>
+  <script src="assets/js/instafeed.js"></script>
+  <script src="assets/js/ishi.initialize.js"></script>
+  <script src="assets/js/support.js"></script>
+
+  <!-- Document Title -->
+  <title>Radon</title>
+</head>
+
+<body id="maintenancepage" style="background-image: url(assets/images/password-page.png);">
+  <!-- loader -->
+  <div id="spin-wrapper"></div>
+  <div id="siteloader">
+    <div class="loader"></div>
+  </div>
+  <!-- header -->
+  <div class="password-page">
+    <div id="content-wrapper">
+      <div class="container">
+        <section id="main">
+          <div id="password_logo" class="password_logo">
+            <a href="{% url 'core:index' %}">
+              <img class="logo img-responsive" src="assets/images/logo.png" alt="Demo Shop">
+            </a>
+          </div>
+          <div class="password-main">
+            <div class="password-main__inner">
+                <div id="passwordpage_header">
+                  <div class="password_deal" data-counter="2022-01-01" data-deal="1">
+                    <h2 class="password-title">we're opening soon</h2>
+                    <div id="storecountdown">
+                      <div class="countdown-days countdown">
+                        <div class="data"></div>
+                        <div class="text">days</div>
+                      </div>
+                      <div class="countdown-hours">
+                        <div class="data"></div>
+                        <div class="text">hours</div>
+                      </div>
+                      <div class="countdown-minutes">
+                        <div class="data"></div>
+                        <div class="text">minutes</div>
+                      </div>
+                      <div class="countdown-seconds">
+                        <div class="data"></div>
+                        <div class="text">seconds</div>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+                <p class="quote">Be the first to know when we launch.</p>
+                <div class="contact-email-form">
+                  <form  action="#" class="password-contact-form">
+                    <div class="password__input-group">
+                       <div class="input-wrapper">
+                         <input name="contact[email]" id="email" placeholder="Email address" type="email">
+                       </div>
+                       <input class="btn btn-primary" name="commit" value="Notify me" type="submit">
+                    </div>
+                  </form>
+                </div>
+                <div class="password-footer-social">
+                  <p class="quote">Spread the word</p>
+                  <div class="block-social password-block-social">
+                    <ul class="social-inner">
+                      <li class="facebook">
+                        <a href="#" target="_blank">
+                          <i class="fa fa-facebook"></i><span class="socialicon-label">Facebook</span>
+                        </a>
+                      </li>
+                      <li class="twitter">
+                        <a href="#" target="_blank">
+                          <i class="fa fa-twitter"></i><span class="socialicon-label">Twitter</span>
+                        </a>
+                      </li>
+                      <li class="rss">
+                        <a href="#" target="_blank">
+                          <i class="fa fa-rss"></i><span class="socialicon-label">Rss</span>
+                        </a>
+                      </li>
+                      <li class="youtube">
+                        <a href="#" target="_blank">
+                          <i class="fa fa-youtube"></i><span class="socialicon-label">YouTube</span>
+                        </a>
+                      </li>
+                      <li class="googleplus">
+                        <a href="#" target="_blank">
+                          <i class="fa fa-google-plus"></i><span class="socialicon-label">Google +</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="password-footer">
+             <a class="classic-link" href="{% url 'core:about' %}" target="_blank">Copyright 2021.All Rights Reserved</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- Breadcrumb -->
+  <script>
+     $(document).ready(function () { 
+      if($('#passwordpage_header .password_deal').data('deal') == '1') {
+          var time = $('#passwordpage_header .password_deal').data('counter');
+          var container = $(this).find('#storecountdown');
+          
+          $(container).countdown(time, function(event) {
+              $(this).find(".countdown-days .data").html(event.strftime('%D'));
+              $(this).find(".countdown-hours .data").html(event.strftime('%H'));
+              $(this).find(".countdown-minutes .data").html(event.strftime('%M'));
+              $(this).find(".countdown-seconds .data").html(event.strftime('%S'));
+              ;
+          });
+      }
+    });
+  </script>  
+  <!-- contactpage -->  
+</body>
+</html>

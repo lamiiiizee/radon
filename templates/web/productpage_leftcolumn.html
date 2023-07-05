@@ -1,0 +1,196 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title %}Product{% endblock %}
+
+{% block content %}
+    <!-- breadcrumb -->
+    <div class="breadcrumb-container">
+      <nav data-depth="5" class="breadcrumb container">
+        <h3 class="h1 product-title breadcrumb-title">Product Name</h3>
+        <ol>
+          <li>
+            <a href="{% url 'core:index' %}">
+              <span>Home</span>
+            </a>
+          </li>
+          
+        </ol>
+      </nav>
+    </div>
+    <!-- section -->
+    <section id="wrapper">
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Left-column -->    
+          
+          <div id="content-wrapper" class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+            <section id="main">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="page-content" id="content">
+                    <ul class="product-flags">
+                      <li class="product-flag new"></li>
+                    </ul>
+                    <div class="images-container">
+                      <div class="product-cover">
+                        <div>
+                          <img class="js-qv-product-cover" src="{{product.image.crop.345x345}}" alt="product-image" title="product-image" style="width:100%;">
+                        </div>
+                      </div>
+                      {% comment %} <div class="col-md-12">
+                        <div class="js-qv-mask mask">
+                          <ul class="qv-carousel product-images owl-carousel">
+                            <li class="thumb-container item">
+                              <img
+                              class="thumb js-thumb  selected "
+                              src="{% static 'web/images/product/2.jpg' %}"
+                              alt="related-items"
+                              title=""
+                              data-image-large-src="{% static 'web/images/product/2.jpg' %}"
+                              width="100"
+                              >
+                            </li>
+                            <li class="thumb-container item">
+                              <img
+                              class="thumb js-thumb "
+                              src="{% static 'web/images/product/3.jpg' %}"
+                              alt="related-items"
+                              title=""
+                              data-image-large-src="{% static 'web/images/product/3.jpg' %}"
+                              width="100"
+                              >
+                            </li>
+                            <li class="thumb-container item">
+                              <img
+                              class="thumb js-thumb "
+                              src="{% static 'web/images/product/5.jpg' %}"
+                              alt="related-items"
+                              title=""
+                              data-image-large-src="{% static 'web/images/product/5.jpg' %}"
+                              width="100"
+                              >
+                            </li>
+                            <li class="thumb-container item">
+                              <img
+                              class="thumb js-thumb "
+                              src="{% static 'web/images/product/6.jpg' %}"
+                              alt="related-items"
+                              title=""
+                              data-image-large-src="{% static 'web/images/product/6.jpg' %}"
+                              width="100"
+                              >
+                            </li>
+                            <li class="thumb-container item">
+                              <img
+                              class="thumb js-thumb "
+                              src="{% static 'web/images/product/7.jpg' %}"
+                              alt="related-items"
+                              title=""
+                              data-image-large-src="{% static 'web/images/product/7.jpg' %}"
+                              width="100"
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div> {% endcomment %}
+                    </div>
+                    <div class="scroll-box-arrows">
+                      <i class="material-icons left">&#xE314;</i>
+                      <i class="material-icons right">&#xE315;</i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 productfullldetails">
+                  <h3 class="h1 product-title"><a href="productpage_fullwidth.html">{{product.name}}</a></h3>
+                  <div class="product-information">
+                    <div id="product-description-short-1">
+                      <p>{% if product.description %}{{product.description }}{% endif %}</p>
+                    </div>
+                    <div class="product-actions">
+                        <form action="#" method="post" id="add-to-cart-or-refresh">
+                          <input type="hidden" name="id_product" value="1" id="product_page_product_id">
+                          <input type="hidden" name="id_customization" value="0" id="product_customization_id">
+                          <div class="product-variants">
+                            <div class="clearfix product-variants-item">
+                              <span class="control-label">Name / Company :</span>
+                              <input type="text"
+                              class=" form-control"
+                              id="customerName"
+                              name="customerName"
+                              onkeyUp="updateName()"
+                              >
+                             
+                             
+                            </div>
+                           
+                          </div>
+                          <div class="product-prices">
+                            <div class="product-price h5">
+                              <div class="current-price">
+                                <span>{% if product.last_price %}₹&nbsp;&nbsp;{{product.last_price}}{% endif %}</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="product-add-to-cart">
+                            <div class="product-quantity-selector form-control-select">
+                                  <p>Quantity</p>
+                                  <div class="quantity-counter">
+                                    <i class="fa fa-caret-left dec button qtyminus" onclick="updateQuantity()"><span>-</span></i>
+                                    <input name="quantity" id="quantity" onkeyUp="updateQuantity()" value="1" class="quantity">
+                                    <i class="fa fa-caret-right inc button qtyplus" onclick="updateQuantity()"><span>+</span></i>
+                                  </div>      
+                            </div>
+                            <div class="product-quantity clearfix">
+                              <div class="add">
+                                <button
+                                  class="btn btn-primary add-to-cart"
+                                  data-button-action="add-to-cart"
+                                  type="button"
+                                  onclick="sendOrder()"
+                                  >
+                                  <i class="material-icons shopping-cart">&#xE547;</i>
+                                  Send Order
+                                </button>
+                                <input type="hidden" id="messageLink" value={{whatsapp_link}}>
+                                <input type="hidden" id="CustomerNameHidden" value="test">
+                                <input type="hidden" id="QuantityHdden" value="test">
+                                
+                              
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div id="_mobile_left_column"></div>
+      <div id="_mobile_right_column"></div>
+      <div class="clearfix"></div>
+    </div>
+    {% endblock %}
+    {% block javascript %}
+    <script>
+      function updateName(){
+        $('#CustomerNameHidden').val($('#customerName').val())
+      }
+      function updateQuantity(){
+        $('#QuantityHdden').val($('#quantity').val())
+      }
+      function sendOrder(){
+        var messagelink=$('#messageLink').val()
+        
+        var url=messagelink+"%0aQuantity:%20"+ $('#quantity').val()+"%0aCustomer:%20"+$('#CustomerNameHidden').val();
+        location.href=url
+      }
+
+    </script>
+
+    {% endblock %}

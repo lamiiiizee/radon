@@ -1,0 +1,971 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<!-- hometop -->
+<div id="top_home">
+  <!-- slider -->
+  <section id="ishislider" class="ishislider-container owl-carousel">
+
+    {% for banner in banner %}
+    <div class="item">
+      <a href="{% url 'core:products' %}" class="slideshow__link">
+        <img src="{{banner.image.url}}" alt="Slide-1" class="img-responsive">
+        <div class="container">
+          <div class="slider-content col-md-5 col-sm-6 col-5" style="text-align:left">
+            <h6 class="slider-title"> {{banner.head_1}}</h6>
+            <div class="main-title">{{banner.head_2}}</div>
+            <div class="desc">
+              <p>{{banner.head_3}}</p>
+            </div>
+            <div class="slider-btn btn-primary">SHOP NOW</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+
+    {% comment %}
+    <div class="item">
+      <a href="{% url 'core:products' %}" class="slideshow__link">
+        <img src="{% static 'web/images/slider/slide-2.png' %}" alt="Slide-2" class="img-responsive">
+        <div class="container">
+          <div class="slider-content col-md-5 col-sm-6 col-5 slider-content-right" style="text-align:left">
+            <h6 class="slider-title"> Radon</h6>
+            <div class="main-title">CAR CHARGERS<span></span> </div>
+            <div class="desc">
+              <p>Compatible designs for your ease.</p>
+            </div>
+            <div class="slider-btn btn-primary">SHOP NOW</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endcomment %}
+  </section>
+
+<!-- product block -->
+
+  <section id="ishiproductsblock" class="ishiproductsblock container">
+    <div class="section-header text-center">
+      <!-- <div class="subtitle">THE LATEST</div> -->
+      <h2 class="title">Product Categories</h2>
+    </div>
+    <div class="logo-bar">
+      <div class="row">
+        <div class="block_content">
+          {% for product in products %}
+          <div class="col-lg-4 col-md-6 col-6 col-xs-6 product-thumb">
+            <div class="product-container">
+              <div class="image">
+                <a href="{% url 'core:products' %}" class="thumbnail product-thumbnail">
+                  <img src="{{product.image.crop.345x345}}" alt="product-img">
+                  <img class="product-img-extra change" alt="product-img" src="{{product.image.crop.345x345}}">
+                </a>
+
+                <div class="button-group">
+                </div>
+                <div class="btn-cart">
+                  <a class="button" href="{% url 'core:products' %}">
+                    <span class="button-cart">
+                      <img src="{% static 'web/svgs/add-to-cart.svg' %}' " alt="add-to-cart">
+                    </span>
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="lblcart">{{product.category}}</span>
+                  </a>
+                </div>
+              </div>
+              <!-- <div class="caption">  
+                        <div class="product-title"><a href="{% url 'core:products' %}">{{product.name}}</a></div>
+                        <p class="description">
+                          {% if product.description %} {{product.description}}{% endif %}</p>
+                        <p class="price">
+                          {% if product.cross_price %}<span class="regular price-old">₹ &nbsp;{{product.cross_price}}</span> {% endif %}
+                          
+                          {% if product.last_price %}<span class="price-sale">₹ &nbsp;{{product.last_price}}</span>{% endif %}
+                        </p>
+                      </div>  -->
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <a href="{% url 'core:products' %}" class="btn-primary counter-btn">
+      VIEW MORE
+    </a>
+  </section>
+
+  <!-- aboutusblock -->
+  <section id="ishiaboutusblock" class="About-container">
+    <div class="container">
+      <div class="row">
+        <div class="about1">
+          <div class="col-xl-7 col-lg-6 col-md-12 col-xs-12 about-img-block">
+            <img class="about-img img-fluid" src="{% static 'web/images/about/about-us.png' %}" alt="Demo Shop">
+          </div>
+          <div class="col-xl-5 col-lg-6 col-md-12 col-xs-12 about-text">
+            <div class="about-text-block">
+              <div class="section-header">
+                <div class="subtitle">
+                  THE PRODUCTS
+                </div>
+                <h2 class="title">
+                  All About RadOn
+                </h2>
+              </div>
+              <div class="description">
+                <p>
+                  Radon is the leading manufactures and vendor of mobile accessories in India. We aspire to deliver
+                  quality and durable mobile accessories at a reasonable price. Radon is the finest manufactures and
+                  dealer of mobile accessories in Kerala that works on a mission to furnish high-grade and durable
+                  charging accessories at an affordable price. Experience cutting-edge trends in technology by choosing
+                  Radon's most delinquent and modernised accessories.
+                </p>
+              </div>
+              <a href="{% url 'core:about' %}" class="about-btn btn-primary">VIEW MORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ishi faq -->
+  <section id="ishi-faq-section">
+    <div class="container">
+      <div class="faq-block">
+        <div class="section-header">
+          <div class="title">
+            FAQ's
+          </div>
+        </div>
+        <div class="faq-content position-center">
+          <div class="faq-container">
+            <div class="accordion" id="accordionExample">
+
+
+
+              <!-- <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <a class="btn btn-link text-container" href="javascript:void(0)" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h4 class="faq-title ">
+                          <span class="category-count">{{forloop.counter}}.</span>
+                          {{faq.faq_question}}
+                        </h4>
+                      </a>
+                    </div>
+                    <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                            <p class="faq-subtitle">{{faq.faq_answer|safe}}</p>
+                      </div>
+                    </div>
+                  </div> -->
+
+
+
+
+              {% for faq in faq %}
+
+              <div class="card">
+                <div class="card-header" id="headingtwo {{faq.id}}">
+                  <a class="btn btn-link text-container {% if not forloop.first %} collapsed {% endif %}"
+                    href="javascript:void(0)" data-toggle="collapse" data-target="#collapsetwo{{faq.id}}"
+                    aria-expanded="{% if forloop.first %} true {% else %} false {% endif %}"
+                    aria-controls="collapseOne{{faq.id}}">
+                    <h4 class="faq-title ">
+                      <span class="category-count">{{forloop.counter}}.</span>
+                      {{faq.faq_question}}
+                    </h4>
+                  </a>
+                </div>
+                <div id="collapsetwo{{faq.id}}" class="collapse  {% if forloop.first %} show{% endif %}"
+                  aria-labelledby="headingtwo{{faq.id}}" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <p class="faq-subtitle">{{faq.faq_answer|safe}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- product block -->
+
+  {% comment %} <section id="ishiproductsblock" class="ishiproductsblock container">
+    <div class="section-header text-center">
+      <!-- <div class="subtitle">THE LATEST</div> -->
+      <h2 class="title">Product Categories</h2>
+    </div>
+    <div class="logo-bar">
+      <div class="row">
+        <div class="block_content">
+          {% for product in products %}
+          <div class="col-lg-4 col-md-6 col-6 col-xs-6 product-thumb">
+            <div class="product-container">
+              <div class="image">
+                <a href="{% url 'core:products' %}" class="thumbnail product-thumbnail">
+                  <img src="{{product.image.crop.345x345}}" alt="product-img">
+                  <img class="product-img-extra change" alt="product-img" src="{{product.image.crop.345x345}}">
+                </a>
+
+                <div class="button-group">
+                </div>
+                <div class="btn-cart">
+                  <a class="button" href="{% url 'core:products' %}">
+                    <span class="button-cart">
+                      <img src="{% static 'web/svgs/add-to-cart.svg' %}' " alt="add-to-cart">
+                    </span>
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="lblcart">{{product.category}}</span>
+                  </a>
+                </div>
+              </div>
+              <!-- <div class="caption">  
+                        <div class="product-title"><a href="{% url 'core:products' %}">{{product.name}}</a></div>
+                        <p class="description">
+                          {% if product.description %} {{product.description}}{% endif %}</p>
+                        <p class="price">
+                          {% if product.cross_price %}<span class="regular price-old">₹ &nbsp;{{product.cross_price}}</span> {% endif %}
+                          
+                          {% if product.last_price %}<span class="price-sale">₹ &nbsp;{{product.last_price}}</span>{% endif %}
+                        </p>
+                      </div>  -->
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <a href="{% url 'core:products' %}" class="btn-primary counter-btn">
+      VIEW MORE
+    </a>
+  </section> {% endcomment %}
+
+
+
+  {% comment %}
+  <section id="ishiproductsblock" class="ishiproductsblock container">
+    <div class="section-header text-center">
+      <!-- <div class="subtitle">THE LATEST</div> -->
+      <h2 class="title">Our Products</h2>
+    </div>
+    <div class="logo-bar">
+      <div class="row">
+        <div class="block_content">
+
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 product-thumb">
+            <div class="product-container">
+              <div class="image">
+                <a href="#" class="thumbnail product-thumbnail">
+                  <img src="{% static 'web/images/category/1.jpg' %}" alt="product-img">
+                  <img class="product-img-extra change" alt="product-img"
+                    src="{% static 'web/images/category/1.jpg' %}">
+                </a>
+
+                <div class="button-group">
+                </div>
+                <div class="btn-cart">
+                  <a class="button" href="#">
+                    <span class="button-cart">
+                      <img src="{% static 'web/svgs/add-to-cart.svg' %}' " alt="add-to-cart">
+                    </span>
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="lblcart">Chargers</span>
+                  </a>
+                </div>
+              </div>
+              <div class="caption">
+                <div class="product-title"><a href="#">{{product.name}}</a></div>
+                <p class="description">
+                  {% if product.description %} {{product.description}}{% endif %}</p>
+                <p class="price">
+                  {% if product.cross_price %}<span class="regular price-old">₹ &nbsp;{{product.cross_price}}</span> {%
+                  endif %}
+
+                  {% if product.last_price %}<span class="price-sale">₹ &nbsp;{{product.last_price}}</span>{% endif %}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 product-thumb">
+            <div class="product-container">
+              <div class="image">
+                <a href="#" class="thumbnail product-thumbnail">
+                  <img src="{% static 'web/images/category/3.png' %}" alt="product-img">
+                  <img class="product-img-extra change" alt="product-img"
+                    src="{% static 'web/images/category/3.png' %}">
+                </a>
+
+                <div class="button-group">
+                </div>
+                <div class="btn-cart">
+                  <a class="button" href="#">
+                    <span class="button-cart">
+                      <img src="{% static 'web/svgs/add-to-cart.svg' %}' " alt="add-to-cart">
+                    </span>
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="lblcart">Cables</span>
+                  </a>
+                </div>
+              </div>
+              <div class="caption">
+                <div class="product-title"><a href="#">{{product.name}}</a></div>
+                <p class="description">
+                  {% if product.description %} {{product.description}}{% endif %}</p>
+                <p class="price">
+                  {% if product.cross_price %}<span class="regular price-old">₹ &nbsp;{{product.cross_price}}</span> {%
+                  endif %}
+
+                  {% if product.last_price %}<span class="price-sale">₹ &nbsp;{{product.last_price}}</span>{% endif %}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 product-thumb">
+            <div class="product-container">
+              <div class="image">
+                <a href="#" class="thumbnail product-thumbnail">
+                  <img src="{% static 'web/images/category/5.jpg' %}" alt="product-img">
+                  <img class="product-img-extra change" alt="product-img"
+                    src="{% static 'web/images/category/5.jpg' %}">
+                </a>
+
+                <div class="button-group">
+                </div>
+                <div class="btn-cart">
+                  <a class="button" href="#">
+                    <span class="button-cart">
+                      <img src="{% static 'web/svgs/add-to-cart.svg' %}' " alt="add-to-cart">
+                    </span>
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="lblcart">Handsfree</span>
+                  </a>
+                </div>
+              </div>
+              <div class="caption">
+                <div class="product-title"><a href="#">{{product.name}}</a></div>
+                <p class="description">
+                  {% if product.description %} {{product.description}}{% endif %}</p>
+                <p class="price">
+                  {% if product.cross_price %}<span class="regular price-old">₹ &nbsp;{{product.cross_price}}</span> {%
+                  endif %}
+
+                  {% if product.last_price %}<span class="price-sale">₹ &nbsp;{{product.last_price}}</span>{% endif %}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 product-thumb">
+            <div class="product-container">
+              <div class="image">
+                <a href="#" class="thumbnail product-thumbnail">
+                  <img src="{% static 'web/images/category/1.jpg' %}" alt="product-img">
+                  <img class="product-img-extra change" alt="product-img"
+                    src="{% static 'web/images/category/1.jpg' %}">
+                </a>
+
+                <div class="button-group">
+                </div>
+                <div class="btn-cart">
+                  <a class="button" href="#">
+                    <span class="button-cart">
+                      <img src="{% static 'web/svgs/add-to-cart.svg' %}' " alt="add-to-cart">
+                    </span>
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="lblcart">Neckband</span>
+                  </a>
+                </div>
+              </div>
+              <div class="caption">
+                <div class="product-title"><a href="#">{{product.name}}</a></div>
+                <p class="description">
+                  {% if product.description %} {{product.description}}{% endif %}</p>
+                <p class="price">
+                  {% if product.cross_price %}<span class="regular price-old">₹ &nbsp;{{product.cross_price}}</span> {%
+                  endif %}
+
+                  {% if product.last_price %}<span class="price-sale">₹ &nbsp;{{product.last_price}}</span>{% endif %}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 product-thumb">
+            <div class="product-container">
+              <div class="image">
+                <a href="#" class="thumbnail product-thumbnail">
+                  <img src="{% static 'web/images/category/1.jpg' %}" alt="product-img">
+                  <img class="product-img-extra change" alt="product-img"
+                    src="{% static 'web/images/category/1.jpg' %}">
+                </a>
+
+                <div class="button-group">
+                </div>
+                <div class="btn-cart">
+                  <a class="button" href="#">
+                    <span class="button-cart">
+                      <img src="{% static 'web/svgs/add-to-cart.svg' %}' " alt="add-to-cart">
+                    </span>
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="lblcart">Pouches</span>
+                  </a>
+                </div>
+              </div>
+              <div class="caption">
+                <div class="product-title"><a href="#">{{product.name}}</a></div>
+                <p class="description">
+                  {% if product.description %} {{product.description}}{% endif %}</p>
+                <p class="price">
+                  {% if product.cross_price %}<span class="regular price-old">₹ &nbsp;{{product.cross_price}}</span> {%
+                  endif %}
+
+                  {% if product.last_price %}<span class="price-sale">₹ &nbsp;{{product.last_price}}</span>{% endif %}
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn-primary counter-btn">
+      VIEW MORE
+    </a>
+  </section>
+  {% endcomment %}
+
+  <section id="ishifeatures">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="subtitle">THE PRODUCTS</div>
+        <h2 class="title">Awesome Features</h2>
+      </div>
+      <div class="row">
+        <div class="features-left col-lg-4 col-md-6 col-sm-6 col-xs-12" style="order: 0;">
+          <div class="ishifeaturesblock-container item">
+            <a target="_blank">
+              <div class="item-inner">
+                <div class="image-inner">
+                  <img src="{% static 'web/images/features/features1.png' %}" class="img-fluid" alt="features1">
+                </div>
+                <div class="features-title">
+                  Fast Charging
+                </div>
+                <div class="features-subtitle">
+                  <p>Save your time, we have the fastest chargers for you.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="ishifeaturesblock-container item">
+            <a target="_blank">
+              <div class="item-inner">
+                <div class="image-inner">
+                  <img src="{% static 'web/images/features/features2.png' %}" class="img-fluid" alt="features2">
+                </div>
+                <div class="features-title">
+                  Durable Products
+                </div>
+                <div class="features-subtitle">
+                  <p>Save your money with our long-lasting products.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="banner-center col-lg-4 col-md-12 col-sm-12 col-xs-12">
+          <img class="img-fluid" src="{% static 'web/images/features/featuresbannerimage.png' %}" alt="Demo Shop">
+        </div>
+
+        <div class="features-right col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="ishifeaturesblock-container item">
+            <a target="_blank">
+              <div class="item-inner">
+                <div class="image-inner">
+                  <img src="{% static 'web/images/features/features3.png' %}" class="img-fluid" alt="features3">
+                </div>
+                <div class="features-title">
+                  Water-Resistant
+                </div>
+                <div class="features-subtitle">
+                  <p>No more worry about water with our water-resistant chargers.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="ishifeaturesblock-container item">
+            <a target="_blank">
+              <div class="item-inner">
+                <div class="image-inner">
+                  <img src="{% static 'web/images/features/features4.png' %}" class="img-fluid" alt="features4">
+                </div>
+                <div class="features-title">
+                  Fire Resistant
+                </div>
+                <div class="features-subtitle">
+                  <p>Save your charger from fire and make it more durable.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- new offer section start -->
+  {% comment %}
+  <style>
+    .badge-primary {
+      padding: 0.2rem 0.65rem;
+      color: var(--white-100);
+      background-color: var(--brown-500);
+    }
+
+    .badge-darken {
+      padding: 0.2rem 0.65rem;
+      color: var(--white-100);
+      background-color: var(--black-500);
+    }
+
+
+
+    .wrapper-column {
+      display: grid;
+      row-gap: 2rem;
+      align-items: center;
+      margin-top: 4rem;
+    }
+
+    @media only screen and (min-width: 48rem) {
+      .wrapper-column {
+        grid-template-columns: repeat(2, minmax(0, 26rem));
+        align-content: center;
+        justify-content: center;
+        column-gap: 4rem;
+        margin-top: 2rem;
+      }
+    }
+
+    .wrapper-figure {
+      position: relative;
+      align-items: center;
+      justify-self: center;
+    }
+
+    .wrapper-figure::before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 50%;
+      left: 50%;
+      z-index: -2;
+      width: 100%;
+      border-radius: 50%;
+      padding-bottom: 100%;
+      translate: -50% -50%;
+      background-color: #ee5a22;
+    }
+
+    .wrapper-image {
+      display: block;
+      max-width: 17rem;
+      height: auto;
+      scale: 1.25;
+      rotate: 30deg;
+      translate: 1rem;
+      filter: drop-shadow(0px 8px 8px rgba(15, 15, 15, 0.4));
+    }
+
+    @media only screen and (min-width: 48rem) {
+      .wrapper-image {
+        max-width: 20rem;
+      }
+    }
+
+    @media only screen and (min-width: 64rem) {
+      .wrapper-image {
+        max-width: 24rem;
+      }
+    }
+
+    .wrapper-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 1.5rem;
+      margin-block: 4rem 2rem;
+    }
+
+    .wrapper-inform {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 0.75rem;
+    }
+
+    .wrapper-detail {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .wrapper-action {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .wrapper-action .btn-neutral {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .sizes,
+    .price {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 0.5rem;
+    }
+
+    .sizes-list {
+      display: flex;
+      column-gap: 0.25rem;
+      padding-right: 1.5rem;
+    }
+
+    .sizes-item {
+      font-family: inherit;
+      font-size: 1rem;
+      line-height: 2rem;
+      cursor: pointer;
+      user-select: none;
+      width: 2rem;
+      height: 2rem;
+      text-align: center;
+      border-radius: 0.25rem;
+      transition: all 0.2s ease;
+    }
+
+    .sizes-item.is-select {
+      font-weight: 500;
+      color: var(--white-100);
+      background-color: var(--brown-500);
+    }
+  </style>
+
+
+  <section class="section wrapper wrapper-section">
+    <div class="container wrapper-column">
+      <div class="wrapper-figure">
+        <img src="{% static 'web/images/counter/counterbanner.png' %}" class="wrapper-image" loading="lazy"
+          alt="Sneaker">
+      </div>
+      <div class="wrapper-content">
+        <div class="wrapper-inform">
+          <span class="badge badge-darken">Latest Product</span>
+          <h1 class="heading-sm font-bold">Nike Air Motion Max</h1>
+          <p class="text-md font-regular">
+            The combine of breathable mesh without seams for a traditional and
+            modern style to add the perfect amount of flash to make you shine.
+          </p>
+        </div>
+        <div class="wrapper-detail">
+          <div class="price">
+            <span class="text-md font-semi">Price:</span>
+            <h3 class="text-xxl font-bold">$99.00</h3>
+          </div>
+          <!-- <div class="sizes">
+                    <span class="text-md font-semi">Sizes:</span>
+                    <ul class="sizes-list">
+                       <li class="sizes-item is-select">37</li>
+                       <li class="sizes-item">38</li>
+                       <li class="sizes-item">39</li>
+                       <li class="sizes-item">40</li>
+                    </ul>
+                 </div> -->
+        </div>
+        <div class="wrapper-action">
+          <button class="btn-primary counter-btn">View More</button>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+
+    const navbarMenu = document.getElementById("menu");
+    const burgerMenu = document.getElementById("burger");
+    const headerMenu = document.getElementById("header");
+
+    // Toggle Navbar Menu on Burger Click
+    if (burgerMenu && navbarMenu) {
+      burgerMenu.addEventListener("click", () => {
+        burgerMenu.classList.toggle("is-active");
+        navbarMenu.classList.toggle("is-active");
+      });
+    }
+
+    // Closed Navbar Menu on Links Click
+    document.querySelectorAll(".menu-link").forEach((link) => {
+      link.addEventListener("click", () => {
+        burgerMenu.classList.remove("is-active");
+        navbarMenu.classList.remove("is-active");
+      });
+    });
+
+    // Fixed Navbar Menu on Window Resize
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 769) {
+        if (navbarMenu.classList.contains("is-active")) {
+          navbarMenu.classList.remove("is-active");
+        }
+      }
+    });
+
+
+  </script>
+  {% endcomment %}
+
+  <!-- new offer section END -->
+
+
+
+
+
+
+  <!-- serviceblock -->
+  <section id="ishiservices" class="ishiservicesblock container">
+    <div class="section-header text-center">
+      <div class="subtitle">THE PRODUCTS</div>
+      <h2 class="title">Our Special Features</h2>
+    </div>
+    <div class="ishiservices row">
+      <div class="services col-lg-3 col-md-6 col-sm-6 col-xs-6">
+        <a href="#">
+          <div class="service-img-outer">
+            <div class="service-img">
+              <img src="{% static 'web/images/services/1.png' %}" class="img-fluid" alt="services1">
+            </div>
+          </div>
+          <div class="service-block">
+            <div class="service-title">Budget-Friendly</div>
+            <div class="service-desc">Get the best products at the best rate.</div>
+          </div>
+        </a>
+      </div>
+      <div class="services col-lg-3 col-md-6 col-sm-6 col-xs-6">
+        <a href="#">
+          <div class="service-img-outer">
+            <div class="service-img">
+              <img src="{% static 'web/images/services/2.png' %}" class="img-fluid" alt="services2">
+            </div>
+          </div>
+          <div class="service-block">
+            <div class="service-title">Compatible Designs</div>
+            <div class="service-desc">Compatible designs for your ease.</div>
+          </div>
+        </a>
+      </div>
+      <div class="services col-lg-3 col-md-6 col-sm-6 col-xs-6">
+        <a href="#">
+          <div class="service-img-outer">
+            <div class="service-img">
+              <img src="{% static 'web/images/services/3.png' %}" class="img-fluid" alt="services3">
+            </div>
+          </div>
+          <div class="service-block">
+            <div class="service-title">Premium Quality</div>
+            <div class="service-desc">Best quality assured with every product.</div>
+          </div>
+        </a>
+      </div>
+      <div class="services col-lg-3 col-md-6 col-sm-6 col-xs-6">
+        <a href="#">
+          <div class="service-img-outer">
+            <div class="service-img">
+              <img src="{% static 'web/images/services/4.png' %}" class="img-fluid" alt="services4">
+            </div>
+          </div>
+          <div class="service-block">
+            <div class="service-title">Dual-port Charger</div>
+            <div class="service-desc">Now charge two devices in one charger.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ishiaboutusblock -->
+
+  <section id="ishicounterblock">
+    <div class="container">
+      <div class="row">
+        <div class="counter">
+          <div class="counter-image-wrapper col-xl-5 col-lg-6 col-md-12 col-sm-12 col-xs-12 counter-img">
+            <img class="counter-img img-fluid" src="{% static 'web/images/counter/counterbanner.png' %}"
+              alt="Demo Shop">
+          </div>
+          <div class="text-wrapper col-xl-7 col-lg-6 col-md-12 col-sm-12 col-xs-12 counter-text">
+            <div class="counter-text-block section-header">
+              <div class="subtitle">THE LATEST</div>
+              <h2 class="title">Fast Chargers</h2>
+              <div class="description">
+                <p>
+                  Experience the new speed of fast chargers from the innovative charger manufacturers of Kerala. Radon
+                  creates exceptional mobile accessories with premium quality at an affordable price. Now enjoy the
+                  latest and most innovative products from Radon at the best offers.
+
+                </p>
+              </div>
+              {% comment %} <div class="features-list">
+                <div class="features-count">
+                  <span class="counter">
+                    <span class="timer" data-from="0" data-to="40">40</span>
+                  </span>
+                  <span class="count-title">Models</span>
+                </div>
+                <div class="features-count">
+                  <span class="counter">
+                    <span class="timer" data-from="0" data-to="20">20</span>
+                  </span>
+                  <span class="count-title">Colors</span>
+                </div>
+                <div class="features-count">
+                  <span class="counter">
+                    <span class="timer" data-from="0" data-to="10">10</span>
+                  </span>
+                  <span class="count-title">Series</span>
+                </div>
+                <div class="features-count">
+                  <span class="counter">
+                    <span class="timer" data-from="0" data-to="5">5</span>
+                  </span>
+                  <span class="count-title">Style</span>
+                </div>
+              </div> {% endcomment %}
+              <a href="{% url 'core:products' %}" class="btn-primary counter-btn">
+                VIEW MORE
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ishitesimonial -->
+  <section id="ishitesimonial" class="ishitestimonialsblock">
+    <div class="bgimage">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="subtitle">THE PRODUCTS</div>
+          <h2 class="title">Customer Review</h2>
+        </div>
+        <div id="ishitestimonials-carousel" class="owl-carousel">
+
+          {% for testimonial in testimonials %}
+          <div class="item ishitestimonials-container">
+            <div class="testimonial-container">
+
+              <div class="user-description">
+                "{{testimonial.comment}}".
+              </div>
+              <div class="testimonial-img">
+                {% if testimonial.photo %}
+                <img src="{{testimonial.photo.crop.80x80}}" class="img-fluid" alt="Marko Westin">
+                {% endif %}
+              </div>
+              <div class="user-name">
+                {{testimonial.name}}
+              </div>
+
+              <div class="user-designation">
+                {% if testimonial.designation %}{{testimonial.designation}}{% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- brand-logo -->
+  <section id="ishimanufacturerblock">
+    <div class="section-header text-center hidden">
+      <div class="subtitle">OUR CLIENTS</div>
+      <h2 class="title">CLIENTS</h2>
+    </div>
+    <div class="container">
+      <div class="manufacturer-container">
+        <div id="manufacturer-carousel" class="owl-carousel">
+
+          {% for client in clients %}
+          <div class="item">
+            <div class="image-container">
+              <a href="{% url 'core:products' %}">
+                <img src="{{client.logo_or_image.crop.130x130}}" alt="brand-1" class="img-responsive">
+              </a>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="smartblog_block" class="smartblog_block clearfix container">
+    <div class="section-header text-center">
+      <div class="subtitle">UPDATES & EVENTS</div>
+      <h2 class="title">Updates</h2>
+    </div>
+    <div class="block_content row">
+      <div id="smartblog-carousel" class="smartblog-carousel owl-carousel">
+
+        {% for update in updates %}
+        <div class="item blog_post">
+          <div class="sds_blog_post">
+            <div class="news_module_image_holder">
+              <a href="{% url 'core:updates' %}">
+                <img alt="Upon of seasons earth dominion" class="feat_img_small" src="{{update.image.crop.870x588}}">
+                <span class="blog-hover"></span>
+              </a>
+
+            </div>
+            <div class="blog_content">
+              <div class="blog_inner">
+                <h4 class="blog_title"><a href="{% url 'core:updates' %}">{{update.heading}}</a></h4>
+                <p class="blog-desc">{{update.short_description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </section>
+
+</div>
+{% endblock %}
