@@ -13609,13 +13609,13 @@ section.checkout-step .continue {
 
 .products-sort-order .select-list {
   display: block;
-  color: #a9a9a9;
+  color: #2d2d2d;
   padding: 10px;
 }
 
 .products-sort-order .select-list:hover {
   background: #000;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
 }
 

@@ -47,10 +47,10 @@
                           <span class="col-sm-3 col-xs-12 col-md-3 hidden-lg-down sort-by">Filter by:</span>
                           <div class="col-sm-9 col-xs-12 col-md-9 products-sort-order dropdown">
                             <a href="javascript:void(0)" class="select-title" rel="nofollow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="FilterCat">All</a>
-                            <div class="dropdown-menu">
-                              <a rel="nofollow" class="select-list current js-search-link" onclick="filterProduct(0)" id="0">All</a>
+                            <div class="dropdown-menu lamiiz-color-white">
+                              <a rel="nofollow" href="" class="select-list lamiiz-color-white current js-search-link" onclick="filterProduct(0)" id="0">All</a>
                               {% for categorie in categories %}
-                              <a rel="nofollow" class="select-list js-search-link" id="{{categorie.id}}" onclick="filterProduct({{categorie.id}})">{{categorie.name}}</a>
+                              <a rel="nofollow" href="" class="select-list lamiiz-color-white js-search-link" id="{{categorie.id}}" onclick="filterProduct({{categorie.id}})">{{categorie.name}}</a>
                               {% endfor %}
                             </div>
                           </div>
@@ -192,3 +192,14 @@
 </script>
 {% endblock %}
 
+<!-- {% block style %}
+<style>
+  .lamiiz-color-white:hover{
+    color: #d3d3d3;
+  }
+  .lamiiz-color-white{
+    color: #d3d3d3;
+  }
+</style>
+
+{% endblock  %} -->

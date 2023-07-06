@@ -1,126 +1,135 @@
 {% load static %}
 
 <footer id="footer">
-    <div class="footer-before">
-      <div class="container">
-        <div class="row">
-          <!-- newsletter  -->
-          <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12">
-            <div class="block_newsletter">
-              <div id="newsletter-container" class="box-content"> 
-                <div class="newsletter_content">
-                  <div class="email-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">          
-                      <symbol id="mail" viewBox="0 0 500 500"><title>mail</title>
-                        <path d="m494.2,488c0,0 0-225.8 0-301 0-3.1-3.9-7-7.7-9.9l-78.7-57.1v-63.1c0-6.2-5.2-10.4-10.4-10.4h-89.7l-45.7-33.3c-3.1-2.1-8.3-2.1-11.5,0l-45.7,33.3h-89.7c-6.2,0-10.4,5.2-10.4,10.4v62.4l-79.7,57.9c-4.7,2.9-7.7,6.7-7.7,9.9 0,75.7 0,303 0,303 0,5.9 4.7,10 9.6,10.4 0.3,0 0.5,0 0.8,0h456c6.7-0.1 10.5-5.3 10.5-12.5zm-19.8-282.3v263.6l-172.1-137.8 172.1-125.8zm-7.7-18.3l-58.9,42.9v-86.2l58.9,43.3zm-210.9-154.5l18.3,13.5h-36.7l18.4-13.5zm131.2,34.4v178.2l-131.2,95.6-131.2-95.6v-178.2h262.4zm-349.8,138.4l172.1,125.8-172.1,138.6v-264.4zm67.6,25.4l-60.4-44 60.4-43.9v87.9zm-48.9,249.5l170.1-136.9 23.5,17.2c4.5,3.4 7.9,3.4 12.5,0l23.5-17.2 171.1,136.9h-400.7z"></path><rect width="140.5" x="186.1" y="118.3" height="19.8"></rect><rect width="140.5" x="186.1" y="181.8" height="19.8"></rect><rect width="140.5" x="186.1" y="245.3" height="19.8"></rect>
-                       </symbol> 
-                    </svg>
-                    <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#mail" x="0%" y="0%"></use></svg>
-                  </div>
-                  <div class="newsletter-text">
-                      <h2 class="heading">Join Our Newsletter</h2>
-                    <div class="sub-heading">Enter your email address and recived news.</div>
-                  </div>
-                </div>  
+  <div class="footer-before">
+    <div class="container">
+      <div class="row">
+        <!-- newsletter  -->
+        <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12">
+          <div class="block_newsletter">
+            <div id="newsletter-container" class="box-content">
+              <div class="newsletter_content">
+                <div class="email-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                    <symbol id="mail" viewBox="0 0 500 500">
+                      <title>mail</title>
+                      <path
+                        d="m494.2,488c0,0 0-225.8 0-301 0-3.1-3.9-7-7.7-9.9l-78.7-57.1v-63.1c0-6.2-5.2-10.4-10.4-10.4h-89.7l-45.7-33.3c-3.1-2.1-8.3-2.1-11.5,0l-45.7,33.3h-89.7c-6.2,0-10.4,5.2-10.4,10.4v62.4l-79.7,57.9c-4.7,2.9-7.7,6.7-7.7,9.9 0,75.7 0,303 0,303 0,5.9 4.7,10 9.6,10.4 0.3,0 0.5,0 0.8,0h456c6.7-0.1 10.5-5.3 10.5-12.5zm-19.8-282.3v263.6l-172.1-137.8 172.1-125.8zm-7.7-18.3l-58.9,42.9v-86.2l58.9,43.3zm-210.9-154.5l18.3,13.5h-36.7l18.4-13.5zm131.2,34.4v178.2l-131.2,95.6-131.2-95.6v-178.2h262.4zm-349.8,138.4l172.1,125.8-172.1,138.6v-264.4zm67.6,25.4l-60.4-44 60.4-43.9v87.9zm-48.9,249.5l170.1-136.9 23.5,17.2c4.5,3.4 7.9,3.4 12.5,0l23.5-17.2 171.1,136.9h-400.7z">
+                      </path>
+                      <rect width="140.5" x="186.1" y="118.3" height="19.8"></rect>
+                      <rect width="140.5" x="186.1" y="181.8" height="19.8"></rect>
+                      <rect width="140.5" x="186.1" y="245.3" height="19.8"></rect>
+                    </symbol>
+                  </svg>
+                  <svg class="icon" viewBox="0 0 40 40">
+                    <use xlink:href="#mail" x="0%" y="0%"></use>
+                  </svg>
+                </div>
+                <div class="newsletter-text">
+                  <h2 class="heading">Join Our Newsletter</h2>
+                  <div class="sub-heading">Enter your email address and recived news.</div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12">
-            <div class="newsletter_form">
-              <form action="#" method="POST">   
-                 {% csrf_token %}           
-                <input name="email" id="email" value="" placeholder="Enter Your Email" type="text" required>
-                <span class="input-group__btn">
-                  <button class="button btn-submit" type="submit">
-                   <span class="newsletter__submit-text--large hidden-xs-down">SUBSCRIBE</span>
-                   <span class="newsletter__submit-text--large hidden-sm-up">GO</span>
-                  </button>
-                </span>
-              </form>
-            </div>
+        </div>
+        <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12">
+          <div class="newsletter_form">
+            <form action="#" method="POST">
+              {% csrf_token %}
+              <input name="email" id="email" value="" placeholder="Enter Your Email" type="text" required>
+              <span class="input-group__btn">
+                <button class="button btn-submit" type="submit">
+                  <span class="newsletter__submit-text--large hidden-xs-down">SUBSCRIBE</span>
+                  <span class="newsletter__submit-text--large hidden-sm-up">GO</span>
+                </button>
+              </span>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    {% comment %} <div class="footer-container">
-      <div class="container">
-        <div class="row">
-          
+  </div>
+  {% comment %} <div class="footer-container">
+    <div class="container">
+      <div class="row">
 
-          <!-- store-info-block  -->
-          <div class="ishistoreinfo col-lg-4 col-md-12 col-sm-12 col-xs-12">
-            <div class="ishistoreinfo-inner">
-              <div class="store-img">
-                  <a href="{% url 'core:about' %}">
-                    <img class="feature-row__image lazy footer-logo-class" src="{% static 'web/images/footer-logo.png' %}" alt="footer-logo">
+
+        <!-- store-info-block  -->
+        <div class="ishistoreinfo col-lg-4 col-md-12 col-sm-12 col-xs-12">
+          <div class="ishistoreinfo-inner">
+            <div class="store-img">
+              <a href="{% url 'core:about' %}">
+                <img class="feature-row__image lazy footer-logo-class" src="{% static 'web/images/footer-logo.png' %}"
+                  alt="footer-logo">
+              </a>
+            </div>
+            <div class="store-desc">
+              <p>
+                Radon is the leading mobile accessories manufacturer in India, delivering superior products of the
+                highest quality to every customer. </p>
+            </div>
+            <div class="block-container">
+              <ul class="social-inner">
+                <li class="facebook">
+                  <a href="{% url 'core:about' %}" target="_blank">
+                    <i class="fa fa-facebook"></i><span class="socialicon-label">Facebook</span>
                   </a>
-              </div>
-              <div class="store-desc">
-                <p>
-                  Radon is the leading mobile accessories manufacturer in India, delivering superior products of the highest quality to every customer. </p>
-              </div>
-              <div class="block-container">
-                <ul class="social-inner">
-                  <li class="facebook">
-                    <a href="{% url 'core:about' %}" target="_blank">
-                      <i class="fa fa-facebook"></i><span class="socialicon-label">Facebook</span>
-                    </a>
-                  </li>
-                  <li class="twitter">
-                    <a href="{% url 'core:about' %}" target="_blank">
-                      <i class="fa fa-twitter"></i><span class="socialicon-label">Twitter</span>
-                    </a>
-                  </li>
-                  <li class="pinterest">
-                    <a href="{% url 'core:about' %}" target="_blank">
-                      <i class="fa fa-pinterest-p"></i><span class="socialicon-label">Pinterest</span>
-                    </a>
-                  </li>
-                  <li class="instagram">
-                    <a href="{% url 'core:about' %}" target="_blank">
-                      <i class="fa fa-instagram"></i><span class="socialicon-label">Instagram</span>
-                    </a>
-                  </li>
-                  <li class="youtube">
-                    <a href="{% url 'core:about' %}" target="_blank">
-                      <i class="fa fa-youtube"></i><span class="socialicon-label">YouTube</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                </li>
+                <li class="twitter">
+                  <a href="{% url 'core:about' %}" target="_blank">
+                    <i class="fa fa-twitter"></i><span class="socialicon-label">Twitter</span>
+                  </a>
+                </li>
+                <li class="pinterest">
+                  <a href="{% url 'core:about' %}" target="_blank">
+                    <i class="fa fa-pinterest-p"></i><span class="socialicon-label">Pinterest</span>
+                  </a>
+                </li>
+                <li class="instagram">
+                  <a href="{% url 'core:about' %}" target="_blank">
+                    <i class="fa fa-instagram"></i><span class="socialicon-label">Instagram</span>
+                  </a>
+                </li>
+                <li class="youtube">
+                  <a href="{% url 'core:about' %}" target="_blank">
+                    <i class="fa fa-youtube"></i><span class="socialicon-label">YouTube</span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
+        </div>
 
-          <div id="_mobile_contact" class="col-md-12 hidden-lg-up"></div>               
-          
-         
+        <div id="_mobile_contact" class="col-md-12 hidden-lg-up"></div>
 
-          <!-- contactblock  -->
-          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="_desktop_contact"> 
-            <div class="row">             
-              <div class="block-contact col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div id="contact-info-container" class="footer-contact">
-                  <div class="block phone col-lg-12 col-md-4 col-sm-4 col-xs-12">
-                    <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-                    <div class="content">
-                      <div class="title">Contact Us</div>
-                      <a href="{% url 'core:contact' %}">9856321455</a>
-                    </div>
+
+
+        <!-- contactblock  -->
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="_desktop_contact">
+          <div class="row">
+            <div class="block-contact col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div id="contact-info-container" class="footer-contact">
+                <div class="block phone col-lg-12 col-md-4 col-sm-4 col-xs-12">
+                  <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                  <div class="content">
+                    <div class="title">Contact Us</div>
+                    <a href="{% url 'core:contact' %}">9856321455</a>
                   </div>
-                  <div class="block email col-lg-12 col-md-4 col-sm-4 col-xs-12">
-                    <span class="icon phone"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                    <div class="content">
-                      <div class="title">Email</div>
-                      <a href="{% url 'core:contact' %}">info@gmail.com</a>
-                    </div>
+                </div>
+                <div class="block email col-lg-12 col-md-4 col-sm-4 col-xs-12">
+                  <span class="icon phone"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                  <div class="content">
+                    <div class="title">Email</div>
+                    <a href="{% url 'core:contact' %}">info@gmail.com</a>
                   </div>
-                  <div class="block address col-lg-12 col-md-4 col-sm-4 col-xs-12">
-                    <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                    <div class="content">
-                      <div class="title">Location</div>
-                      <p>4005 Silver business point</p>
-                      <p>India</p>
-                    </div>
+                </div>
+                <div class="block address col-lg-12 col-md-4 col-sm-4 col-xs-12">
+                  <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                  <div class="content">
+                    <div class="title">Location</div>
+                    <p>4005 Silver business point</p>
+                    <p>India</p>
                   </div>
                 </div>
               </div>
@@ -128,24 +137,29 @@
           </div>
         </div>
       </div>
-    </div> {% endcomment %}
-    <div class="footer-after">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-xs-12">
-            <!-- copyrights -->
-            <p class="footer-aftertext">
-                <a class="_blank">
-                  Copyright 2021 All Rights Reserved
-                </a>
-            </p>
-          </div>
-          <div class="col-lg-6 col-xs-12">
-            <!-- payment block -->
-            
-          </div>
+    </div>
+  </div> {% endcomment %}
+  <div class="footer-after">
+    <div class="container">
+      <div class="row lamiiz-aling-center">
+        <div class="">
+          <!-- copyrights -->
+          <p class="footer-aftertext">
+            <a class="_blank">
+              Copyright 2021 All Rights Reserved
+            </a>
+          </p>
         </div>
       </div>
     </div>
-    <a id="slidetop"></a>
+  </div>
+  <a id="slidetop"></a>
 </footer>
+
+{% block style %}
+<style>
+  .lamiiz-aling-center {
+    justify-content: center;
+  }
+</style>
+{% endblock %}
