@@ -17889,4 +17889,7 @@ div.required .control-label:before {
     flex: 0 0 50%;
     max-width: 50%;
   }
+  #ishi-faq-section {
+    background-image: none;
+  }
 }

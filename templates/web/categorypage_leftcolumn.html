@@ -35,12 +35,12 @@
                 <div id="products" class="category-product-info">
                   <div id="product-list-top">
                     <div id="js-product-list-top" class="row products-selection">
-                      <div class="col-lg-1 col-sm-6 total-products">
+                      {% comment %} <div class="col-lg-1 col-sm-6 total-products">
                         <span class="layout-options">
                           <span id="grid-view" class="checked"></span>
                           <span id="list-view"></span>
                         </span>
-                      </div>
+                      </div> {% endcomment %}
                       <div class="col-lg-6">
                         
                         <div class="row sort-by-row">
@@ -48,9 +48,9 @@
                           <div class="col-sm-9 col-xs-12 col-md-9 products-sort-order dropdown">
                             <a href="javascript:void(0)" class="select-title" rel="nofollow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="FilterCat">All</a>
                             <div class="dropdown-menu lamiiz-color-white">
-                              <a rel="nofollow" href="" class="select-list lamiiz-color-white current js-search-link" onclick="filterProduct(0)" id="0">All</a>
+                              <p rel="nofollow" class="select-list lamiiz-color-white current js-search-link" onclick="filterProduct(0)" id="0">All</p>
                               {% for categorie in categories %}
-                              <a rel="nofollow" href="" class="select-list lamiiz-color-white js-search-link" id="{{categorie.id}}" onclick="filterProduct({{categorie.id}})">{{categorie.name}}</a>
+                              <p rel="nofollow" class="select-list lamiiz-color-white js-search-link" id="{{categorie.id}}" onclick="filterProduct({{categorie.id}})">{{categorie.name}}</p>
                               {% endfor %}
                             </div>
                           </div>

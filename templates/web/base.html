@@ -11,6 +11,28 @@
   <meta name="author" content="zytheme" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Mobile Phone Accessories ">
+
+  <!-- Primary Meta Tags -->
+
+  <meta name="title" content="Mobile Phone Accessories" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://metatags.io" />
+  <meta property="og:title" content="Mobile Phone Accessories" />
+  <meta property="og:description" content="Mobile Phone Accessories" />
+  <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://metatags.io" />
+  <meta property="twitter:title" content="Mobile Phone Accessories" />
+  <meta property="twitter:description" content="Mobile Phone Accessories" />
+  <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+  <!-- Meta Tags Generated with https://metatags.io -->
+
+
   <link rel="icon" href="{% static 'web/images/favicon.png' %}" sizes="32x32" type="image/png">
   <link rel="stylesheet" href="{% static 'web/css/material-icons.min.css' %}">
   <link rel="stylesheet" href="{% static 'web/css/tether.min.css' %}">
@@ -21,9 +43,9 @@
   <link href="{% static 'web/css/responsive.css' %}" rel="stylesheet">
   <link href="{% static 'web/css/owl.carousel.min.css' %}" rel="stylesheet">
   <link href="{% static 'web/css/theme.css' %}" rel="stylesheet">
- <link href="{% static 'web/css/responsive.css' %}" rel="stylesheet">
+  <link href="{% static 'web/css/responsive.css' %}" rel="stylesheet">
 
-  <!-- JavaScripts -->   
+  <!-- JavaScripts -->
   <script src="{% static 'web/js/jquery.js' %}"></script>
   <script src="{% static 'web/js/bootstrap.js' %}"></script>
   <script src="{% static 'web/js/owl.carousel.js' %}"></script>
@@ -59,17 +81,19 @@
     {% block content %}
 
     {% endblock %}
-     <!-- footer -->
-     {% include 'web/partials/footer.html' %}
+    <!-- footer -->
+    {% include 'web/partials/footer.html' %}
 
-     <a href="tel:+919656248731" class="call d-lg-none">
+    <a href="tel:+919656248731" class="call d-lg-none">
       <img src="{% static 'web/images/icons/call.png' %}" style="max-width:100%" alt="Call">
-  </a>
+    </a>
 
-  <a href="https://wa.me/919656248731" class="whatsapp" target="blank">
+    <a href="https://wa.me/919656248731" class="whatsapp" target="blank">
       <img src="{% static 'web/images/icons/whatsapp.png' %}" style="max-width:100%" alt="whatsapp">
-  </a>
-</main>
-{% block javascript %}{% endblock %}
+    </a>
+  </main>
+  {% block javascript %}{% endblock %}
+  {% block script %}{% endblock %}
 </body>
+
 </html>
