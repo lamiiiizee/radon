@@ -2,11 +2,11 @@
 {% load static %}
 {% block title %}Updates{% endblock %}
 {% block content %}
-      <!-- Breadcrumb -->
-      <div class="breadcrumb-container mb-4">
-        <nav data-depth="2" class="breadcrumb container">
-          <h1 class="h1 category-title breadcrumb-title">BLOG</h1>
-          <ul>
+<!-- Breadcrumb -->
+<div class="breadcrumb-container mb-4">
+  <nav data-depth="2" class="breadcrumb container">
+    <h1 class="h1 category-title breadcrumb-title">UPDATES</h1>
+    <!-- <ul>
             <li>
               <a href="{% url 'core:index' %}">
                 <span>Home</span>
@@ -15,51 +15,74 @@
             <li>
                 <span>Blog Articles</span>
             </li>
-          </ul>
-        </nav>
-      </div>
-      <!-- Smart Blog  -->
-      <div id="wrapper">
-        <div class="container">
-          <div class="row">    
-                                
-            <div id="content-wrapper" class="col-xs-12 col-sm-12 col-md-12 col-lg-9"> 
-              <div id="smartblogcat" class="block">
+          </ul> -->
+  </nav>
+</div>
+<!-- Smart Blog  -->
+<div id="wrapper">
+  <div class="container-fluid col-9">
+    <div class="row">
 
-                {% for update in updates  %}
-                <div class="sdsarticleCat clearfix row">
-                  <div class="articleContent col-xl-6 col-lg-12 col-md-12">
-                    <a href="{% url 'core:update' update.id %}" >
-                      <img alt="Upon of seasons earth dominion" src="{{update.image.crop.870x588}}">
-                    </a>
-                  </div>
-                  <div class="smartblog-desc col-xl-6 col-lg-12 col-md-12">
-                    <div class="sdsarticleHeader">
-                      <h3 class='sdstitle_block'><a  href="{% url 'core:update' update.id %}">{{update.heading}}</a></h3>
-                    </div>
-                    
-                    <div class="sdsarticle-des">
-                      <div class="clearfix">
-                        <div class="lipsum">
-                          {{update.short_description}}
-                        </div>
-                      </div>
-                    </div>
-                    <div class="sdsreadMore">
-                      <span class="more">
-                        <a  href="{% url 'core:update' update.id %}" class="r_more btn-primary">Read more</a>
-                      </span>
-                    </div>
+      <div id="content-wrapper" class="col-xs-12 col-sm-12 col-md-12">
+        <div id="smartblogcat" class="block row">
+
+          {% comment %} {% for update in updates %}
+          <div class="sdsarticleCat clearfix row">
+            <div class="articleContent col-xl-6 col-lg-12 col-md-12">
+              <a href="{% url 'core:update' update.id %}">
+                <img alt="Upon of seasons earth dominion" src="{{update.image.url}}">
+              </a>
+            </div>
+            <div class="smartblog-desc col-xl-6 col-lg-12 col-md-12">
+              <div class="sdsarticleHeader">
+                <h3 class='sdstitle_block'><a href="{% url 'core:update' update.id %}">{{update.heading}}</a></h3>
+              </div>
+
+              <div class="sdsarticle-des">
+                <div class="clearfix">
+                  <div class="lipsum">
+                    {{update.short_description}}
                   </div>
                 </div>
-                {% endfor %}
-            </div>          
+              </div>
+              <div class="sdsreadMore">
+                <span class="more">
+                  <a href="{% url 'core:update' update.id %}" class="r_more btn-primary">Read more</a>
+                </span>
+              </div>
+            </div>
           </div>
-        </div>        
+          {% endfor %} {% endcomment %}
+          {% for update in updates %}
+          <div
+            class="product-miniature phone-product js-product-miniature col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+            <div class="product-container product-thumb">
+              <div class="image">
+                <a href="{% url 'core:update' update.id %}" class="thumbnail product-thumbnail">
+                  <img src="{{update.image.url}}" alt="update-img">
+                </a>
+              </div>
+              <div class="caption align-left-lamiiz">
+                <h3 class='product-title'><a href="{% url 'core:update' update.id %}">{{update.heading}}</a></h3>
+               <div class="sdsarticle-des">
+                <div class="clearfix">
+                  <div class="lipsum">
+                    {{update.short_description}}
+                  </div>
+                </div>
+              </div>
+
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
       </div>
-      <div class="container">
-        <div id="_mobile_left_column"></div>
-        <div id="_mobile_right_column"></div>
-        <div class="clearfix"></div>
-      </div>
-      {% endblock %}
+    </div>
+  </div>
+  <div class="container">
+    <div id="_mobile_left_column"></div>
+    <div id="_mobile_right_column"></div>
+    <div class="clearfix"></div>
+  </div>
+  {% endblock %}

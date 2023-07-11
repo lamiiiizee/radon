@@ -55,14 +55,14 @@
       <div class="row">
         <div class="block_content">
           {% for product in products %}
-          <div class="col-lg-4 col-md-6 col-6 col-xs-6 product-thumb">
+          <div class="col-lg-3 col-md-6 col-6 col-xs-6 product-thumb">
             <div class="product-container">
               <div class="image">
                 <a href="{% url 'core:products' %}" class="thumbnail product-thumbnail">
-                  <img src="{{product.image.crop.345x345}}" alt="product-img">
-                  <img class="product-img-extra change" alt="product-img" src="{{product.image.crop.345x345}}">
+                  <img src="{{product.image.url}}" alt="product-img">
+                  <!-- <img class="product-img-extra change" alt="product-img" src="{{product.image.url}}"> -->
                 </a>
-
+<!-- crop.345x345 -->
                 <div class="button-group">
                 </div>
                 <div class="btn-cart">
@@ -948,12 +948,12 @@
           <div class="sds_blog_post">
             <div class="news_module_image_holder">
               <a href="{% url 'core:updates' %}">
-                <img alt="Upon of seasons earth dominion" class="feat_img_small" src="{{update.image.crop.870x588}}">
+                <img alt="Upon of seasons earth dominion" class="feat_img_small" src="{{update.image.url}}">
                 <span class="blog-hover"></span>
               </a>
 
             </div>
-            <div class="blog_content">
+            <div class="blog_content align-center-lamiiz">
               <div class="blog_inner">
                 <h4 class="blog_title"><a href="{% url 'core:updates' %}">{{update.heading}}</a></h4>
                 <p class="blog-desc">{{update.short_description}}</p>
