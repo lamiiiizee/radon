@@ -2866,13 +2866,13 @@
   }
 }
 
-#ishimanufacturerblock .item:hover img {
+/* #ishimanufacturerblock .item:hover img {
   -moz-transform: rotateY(360deg);
   -webkit-transform: rotateY(360deg);
   -o-transform: rotateY(360deg);
   -ms-transform: rotateY(360deg);
   transform: rotateY(360deg);
-}
+} */
 
 .ishibannerblock {
   text-align: center;

@@ -21,7 +21,7 @@
         <div id="gallery-container" class="block lamiiz_gallery row">
 
 
-     {% for gallery in gallaries %}
+          {% for gallery in gallaries %}
           <div class="sdsarticleCat clearfix row col-sm-6-lamiiz col-sm-6 col-md-4 col-lg-3">
             <div class="articleContent col-12">
               <a href="{{gallery.image.url}}" class="">
@@ -29,191 +29,14 @@
               </a>
               <div class="btn-cart">
                 <a class="button buy-btn position-absolute-lamiiz" href="">
-                  <span class="lblcart h5-lamiiz">Purchase</span>
+                  <span class="lblcart h5-lamiiz">{{gallery.name}}</span>
                 </a>
               </div>
-              <style>
-                .position-absolute-lamiiz{
-                  position: absolute;
-                  margin: -50px 0px 0px 105px;
-                  display: block;
-                  background-color: #ee5a22;
-                  border-radius: 30px;
-                  transition: 0.5s ease-in-out;
-                  z-index:-999999999999999;
-                  opacity: 0;
 
-                }
-                .sdsarticleCat{
-                  justify-content: center;
-                  align-items: center;
-                  text-align: center;
-                }
-                .articleContent:hover .position-absolute-lamiiz{
-                  opacity: 1;
-                  display: block;
-                  z-index:999999999999999;
-                }
-                .h5-lamiiz{
-                  padding: 6px 25px;
-                  align-items: center;
-                  justify-content: center;
-                  text-align: center;
-                  font-size: 16px;
-                }
-              </style>
             </div>
           </div>
           {% endfor %}
 
-          {% comment %} {% for gallery in gallaries %}
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="gallery-item">
-              <a href="{{ gallery.image.url }}" class="popup-link">
-                <img src="{{ gallery.image.url }}" alt="Gallery Image">
-              </a>
-            </div>
-          </div>
-          {% endfor %} {% endcomment %}
-<!-- rand for loopil melethe cls styles thayyathe for loopil ad cheyyanam -->
-          {% comment %} <div id="popup-gallery" class="popup-gallery">
-            <div class="popup-item">
-              <img src="" alt="Popup Image">
-              <div class="prev">&lt;</div>
-              <div class="next">&gt;</div>
-            </div>
-          </div>
-          
-
-          <style>
-            .popup-gallery {
-              display: none;
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background: rgba(0, 0, 0, 0.8);
-              z-index: 9999;
-            }
-          
-            .popup-gallery .popup-item {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-            }
-          
-            .popup-gallery .popup-item img {
-              max-width: 90%;
-              max-height: 90%;
-              display: block;
-              margin: 0 auto;
-            }
-          
-            .popup-gallery .prev,
-            .popup-gallery .next {
-              position: absolute;
-              top: 50%;
-              transform: translateY(-50%);
-              color: #fff;
-              font-size: 24px;
-              cursor: pointer;
-            }
-          
-            .popup-gallery .prev {
-              left: 20px;
-            }
-          
-            .popup-gallery .next {
-              right: 20px;
-            }
-          </style>
-          
-          
-          <script>
-            // Open the popup gallery on image click
-            document.addEventListener('DOMContentLoaded', function() {
-              const galleryItems = document.querySelectorAll('.gallery-item');
-          
-              galleryItems.forEach(function(item, index) {
-                const popupLink = item.querySelector('.popup-link');
-                popupLink.addEventListener('click', function(e) {
-                  e.preventDefault();
-                  openPopupGallery(index);
-                });
-              });
-            });
-          
-            // Open the popup gallery at the specified index
-            function openPopupGallery(index) {
-              const popupGallery = document.getElementById('popup-gallery');
-              const popupItem = popupGallery.querySelector('.popup-item');
-              const popupImage = popupItem.querySelector('img');
-              const prevButton = popupItem.querySelector('.prev');
-              const nextButton = popupItem.querySelector('.next');
-              const galleryItems = document.querySelectorAll('.gallery-item');
-          
-              // Set the popup image source
-              const imageSrc = galleryItems[index].querySelector('img').getAttribute('src');
-              popupImage.src = imageSrc;
-          
-              // Show the popup gallery
-              popupGallery.style.display = 'flex';
-          
-              // Add event listeners for prev/next buttons
-              prevButton.addEventListener('click', function() {
-                navigatePopupGallery(index, -1);
-              });
-          
-              nextButton.addEventListener('click', function() {
-                navigatePopupGallery(index, 1);
-              });
-          
-              // Close the gallery when clicked outside the image
-              popupGallery.addEventListener('click', function(e) {
-                if (e.target === popupGallery) {
-                  closePopupGallery();
-                }
-              });
-            }
-          
-            // Navigate between images in the popup gallery
-            function navigatePopupGallery(currentIndex, direction) {
-              const galleryItems = document.querySelectorAll('.gallery-item');
-              const popupImage = document.querySelector('.popup-item img');
-          
-              // Hide the current item
-              galleryItems[currentIndex].style.display = 'none';
-          
-              // Calculate the index of the next item
-              let nextIndex = currentIndex + direction;
-          
-              // Wrap around if reached the end
-              if (nextIndex < 0) {
-                nextIndex = galleryItems.length - 1;
-              } else if (nextIndex >= galleryItems.length) {
-                nextIndex = 0;
-              }
-          
-              // Show the next item
-              galleryItems[nextIndex].style.display = 'block';
-          
-              // Update the popup image source
-              const imageSrc = galleryItems[nextIndex].querySelector('img').getAttribute('src');
-              popupImage.src = imageSrc;
-            }
-          
-            // Close the popup gallery
-            function closePopupGallery() {
-              const popupGallery = document.getElementById('popup-gallery');
-              popupGallery.style.display = 'none';
-            }
-          </script> {% endcomment %}
         </div>
       </div>
 </section>
@@ -223,4 +46,45 @@
   <div class="clearfix"></div>
 </div>
 <!-- footer -->
+{% endblock %}
+
+{% block stylesheet-lamiiz-gallery %}
+
+<style>
+  .position-absolute-lamiiz {
+    position: absolute;
+    margin: -57px 0 0 113px;
+    padding: 6px 55px;
+    display: block;
+    background-color: #ee5a22;
+    border-radius: 30px;
+    transition: 0.5s ease-in-out;
+    z-index: -999999999999999;
+    opacity: 0;
+  }
+
+  .position-absolute-lamiiz:hover {
+    background-color: black;
+  }
+
+  .sdsarticleCat {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .articleContent:hover .position-absolute-lamiiz {
+    opacity: 1;
+    display: block;
+    z-index: 999999999999999;
+  }
+
+  .h5-lamiiz {
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+  }
+</style>
 {% endblock %}

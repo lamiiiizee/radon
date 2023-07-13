@@ -48,7 +48,11 @@ class Testimonial(models.Model):
 
 
 class Gallery(models.Model):
+    name = models.CharField(max_length=225)
     image = VersatileImageField("Gallery", blank=True, null=True, upload_to="Gallery/")
+
+    def __str__(self):
+        return str(self.name)
 
     class Meta:
         verbose_name = "Gallery"
